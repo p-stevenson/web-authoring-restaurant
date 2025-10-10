@@ -47,7 +47,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* ----- declare variables ----- */
 body {
-  --header-text-color: rgb(186, 199, 189);
+  --header-text-color: rgb(180, 201, 185);
 }
 
 /* ----- font imports ----- */
@@ -141,11 +141,12 @@ nav li#phoneNumber-li {
   font-weight: bold; 
 }
 
-nav li#home-li {
+nav li#home-li a {
   justify-content: center;
   outline-color: red;
   font-family: 'BehindNineties-Upright';
   font-size: 1rem;
+  color: white;
 }
 
 nav li #bistro {
@@ -189,7 +190,7 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-color: rgb(172, 207, 165);
+  background-color: rgb(208, 230, 203);
 }
 #main-right {
   flex: 1;
