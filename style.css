@@ -1,0 +1,228 @@
+
+/* ----- css reset ----- */
+*, *::before, *::after {
+  box-sizing: border-box;
+  /* outline: 1px solid red; */
+  outline-offset: -1px;
+}
+
+* {
+  margin: 0;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    interpolate-size: allow-keywords;
+  }
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+input, button, textarea, select {
+  font: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+p {
+  text-wrap: pretty;
+}
+h1, h2, h3, h4, h5, h6 {
+  text-wrap: balance;
+}
+
+#root, #__next {
+  isolation: isolate;
+}
+
+/* ----- declare variables ----- */
+body {
+  --header-text-color: rgb(186, 199, 189);
+}
+
+/* ----- font imports ----- */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* ----- local fonts ----- */
+@font-face {
+  font-family: 'BehindNineties-Upright';
+  src: url(fonts/behindNineties/WOFF2/UPRIGHT/Behind-The-Nineties-Bd.woff2) format('woff2');
+  src: url(fonts/behindNineties/WOFF/UPRIGHT/Behind-The-Nineties-Bd.woff) format('woff');
+
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'BehindNineties-Italic';
+  src: url(fonts/behindNineties/WOFF2/ITALIC/Behind-The-Nineties-It.woff2) format('woff2');
+  src: url(fonts/behindNineties/WOFF/ITALIC/Behind-The-Nineties-It.woff) format('woff');
+
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* ----- main styling ----- */
+html {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background: radial-gradient(#686868, #1e291d);
+}
+
+body {
+  flex: 1 1 0;
+  max-width: 1300px;
+  outline-color: hotpink;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.45);
+  
+}
+
+nav {
+  outline-color: lime;
+  -webkit-box-shadow: 0px 3px 8px 0px rgba(0,0,0,0.3); 
+  box-shadow: 0px 3px 8px 0px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: row;
+  background-color: #1a1a1a;
+  font-size: 0.8rem;
+  font-family: "Roboto", sans-serif;
+  align-items: center;
+  height: 2rem;
+  color: var(--header-text-color);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  padding: 0;
+  margin: 0;
+}
+
+.navLinks1, .navLinks2 {
+  outline-color: goldenrod;
+  padding: 0 0 0 2rem;
+  display: flex;
+  flex: 1;
+}
+
+.navLinks1 {
+  max-width: 50%;
+  align-items: center;
+}
+
+.navLinks2 {
+  outline-color: aqua;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 0;
+}
+
+.navLinks1 a {
+  padding: 0 1rem 0 0;
+}
+
+nav li {
+  outline-color: rgb(234, 0, 255);
+  list-style-type: none;
+}
+
+nav li#phoneNumber-li {
+  outline-color: rgb(86, 182, 41);
+  padding-right: 2rem;
+  font-weight: bold; 
+}
+
+nav li#home-li {
+  justify-content: center;
+  outline-color: red;
+  font-family: 'BehindNineties-Upright';
+  font-size: 1rem;
+}
+
+nav li #bistro {
+  font-family: 'BehindNineties-Italic';
+}
+
+nav a:link {
+  text-decoration: none;
+  color: var(--header-text-color);
+}
+
+nav a:visited {
+  text-decoration: none;
+}
+
+nav a:hover {
+  text-decoration: underline;
+  font-weight: bolder;
+}
+
+nav li#home-li a:hover {
+  text-decoration: none;
+}
+
+nav a:active {
+  text-decoration: none;
+}
+
+main {
+  /* outline: 1px solid hotpink; */
+  display: flex;
+  flex-direction: row;
+  height: calc(100vh - 2rem);
+  overflow: hidden;
+}
+
+#main-left {
+  /* outline: 1px solid black; */
+  flex: 1;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: rgb(172, 207, 165);
+}
+#main-right {
+  flex: 1;
+}
+
+.container {
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.image {
+	width: 100%;
+  height: 100%;
+	opacity: 0;
+	animation: change-img-anim 30s infinite;
+  position: absolute;
+  object-fit: cover;
+}
+
+.image:nth-of-type(1) {
+	animation-delay: 0s;
+}
+.image:nth-of-type(2) {
+	animation-delay: 10s;
+}
+.image:nth-of-type(3) {
+	animation-delay: 20s;
+}
+
+@keyframes change-img-anim {
+	0%{ opacity: 0;}
+	10%{ opacity: 1;}
+	90%{ opacity: 1;}
+	100%{ opacity: 0;}
+}
