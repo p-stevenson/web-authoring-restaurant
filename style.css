@@ -186,13 +186,14 @@ main {
 #main-left {
   /* outline: 1px solid black; */
   flex: 1;
-  padding: 2rem;
+  /* padding: 2rem; */
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(12, 1fr);
   gap: 8px;
   justify-content: center;
   background-color: rgb(208, 230, 203);
+  min-width: 52.5%;
 }
 
 #main-right {
