@@ -1,13 +1,30 @@
+/* ----- font imports ----- */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* ----- local fonts ----- */
+@font-face {
+  font-family: 'BehindNineties-Upright';
+  src: url(fonts/behindNineties/WOFF2/UPRIGHT/Behind-The-Nineties-Bd.woff2) format('woff2'),
+       url(fonts/behindNineties/WOFF/UPRIGHT/Behind-The-Nineties-Bd.woff) format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'BehindNineties-Italic';
+  src: url(fonts/behindNineties/WOFF2/ITALIC/Behind-The-Nineties-It.woff2) format('woff2'),
+       url(fonts/behindNineties/WOFF/ITALIC/Behind-The-Nineties-It.woff) format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
 
 /* ----- css reset ----- */
 *, *::before, *::after {
   box-sizing: border-box;
   /* outline: 1px solid red; */
   outline-offset: -1px;
-}
-
-* {
   margin: 0;
+  --header-text-color: rgb(180, 201, 185);
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -16,10 +33,7 @@
   }
 }
 
-body {
-  line-height: 1.5;
-  -webkit-font-smoothing: antialiased;
-}
+
 
 img, picture, video, canvas, svg {
   display: block;
@@ -37,6 +51,7 @@ p, h1, h2, h3, h4, h5, h6 {
 p {
   text-wrap: pretty;
 }
+
 h1, h2, h3, h4, h5, h6 {
   text-wrap: balance;
 }
@@ -45,52 +60,33 @@ h1, h2, h3, h4, h5, h6 {
   isolation: isolate;
 }
 
-/* ----- declare variables ----- */
-body {
-  --header-text-color: rgb(180, 201, 185);
-}
-
-/* ----- font imports ----- */
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
-
-/* ----- local fonts ----- */
-@font-face {
-  font-family: 'BehindNineties-Upright';
-  src: url(fonts/behindNineties/WOFF2/UPRIGHT/Behind-The-Nineties-Bd.woff2) format('woff2');
-  src: url(fonts/behindNineties/WOFF/UPRIGHT/Behind-The-Nineties-Bd.woff) format('woff');
-
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'BehindNineties-Italic';
-  src: url(fonts/behindNineties/WOFF2/ITALIC/Behind-The-Nineties-It.woff2) format('woff2');
-  src: url(fonts/behindNineties/WOFF/ITALIC/Behind-The-Nineties-It.woff) format('woff');
-
-  font-weight: normal;
-  font-style: normal;
-}
-
 /* ----- main styling ----- */
 html {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  background: radial-gradient(#686868, #1e291d);
+  background-color: rgb(48, 51, 47);
 }
 
 body {
-  flex: 1 1 0;
-  max-width: 1300px;
-  outline-color: hotpink;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  flex: 1 1 auto;
+  /* outline: 5px solid yellow; */
   box-shadow: 0 20px 50px rgba(0,0,0,0.45);
-  
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 10fr 1fr;
+  grid-template-rows: 2em 1fr;
+  max-width: 2300px;
+  margin: 0 auto;
 }
 
+/* ----- navigation ----- */
 nav {
+  grid-column: 2 / 3;
+  grid-row: 1;
   outline-color: lime;
-  -webkit-box-shadow: 0px 3px 8px 0px rgba(0,0,0,0.3); 
   box-shadow: 0px 3px 8px 0px rgba(0, 0, 0, 0.3);
   display: flex;
   flex-direction: row;
@@ -98,7 +94,7 @@ nav {
   font-size: 0.8rem;
   font-family: "Roboto", sans-serif;
   align-items: center;
-  height: 2rem;
+  height: auto;
   color: var(--header-text-color);
   position: sticky;
   top: 0;
@@ -109,7 +105,6 @@ nav {
 
 .navLinks1, .navLinks2 {
   outline-color: goldenrod;
-  padding: 0 0 0 2rem;
   display: flex;
   flex: 1;
 }
@@ -117,6 +112,7 @@ nav {
 .navLinks1 {
   max-width: 50%;
   align-items: center;
+  padding: 0 0 0 2rem;
 }
 
 .navLinks2 {
@@ -153,13 +149,10 @@ nav li #bistro {
   font-family: 'BehindNineties-Italic';
 }
 
-nav a:link {
+/* ----- navigation links ----- */
+nav a:link, nav a:visited {
   text-decoration: none;
   color: var(--header-text-color);
-}
-
-nav a:visited {
-  text-decoration: none;
 }
 
 nav a:hover {
@@ -167,29 +160,53 @@ nav a:hover {
   font-weight: bolder;
 }
 
-nav li#home-li a:hover {
+nav a:active, nav li#home-li a:hover {
   text-decoration: none;
 }
 
-nav a:active {
-  text-decoration: none;
+/* ----- side blocks ----- */
+#block-left, #block-right {
+  background-color: rgb(48, 51, 47);
+  grid-row: 1 / 3;
+  z-index: 999;
+}
+
+#block-left {
+  grid-column: 1 / 2;
+}
+
+#block-right {
+  grid-column: 3;
 }
 
 main {
-  /* outline: 1px solid hotpink; */
   display: flex;
-  flex-direction: row;
-  height: calc(100vh - 2rem);
-  overflow: hidden;
+  flex: 1 1 auto;
+  /* outline: 3px solid aquamarine; */
+  max-width: 100%;
+}
+
+/* ----- main content areas ----- */
+#main-left, #main-right {
+  flex: 1 1 auto;
+  min-height: calc(100vh - 2rem);
+  z-index: 999;
 }
 
 #main-left {
+  /* grid-column: 2; */
   display: flex;
   flex-direction: column;
   /* outline: 1px solid lime; */
   background-color: rgb(229, 236, 228);
   min-width: 52.5%;
   justify-content: center;
+  z-index: 995;
+}
+
+#main-right {
+  /* grid-column: 3 / 4; */
+  flex: 1 1 auto;
 }
 
 #main-logo {
@@ -209,12 +226,7 @@ main {
   min-width: 15%;
 }
 
-
-#main-right {
-  z-index: 999;
-  flex: 1;
-}
-
+/* ----- image animation ----- */
 .container {
   height: 100%;
   overflow: hidden;
@@ -222,26 +234,18 @@ main {
 }
 
 .imgAnim1 {
-	width: 100%;
+  width: 100%;
   height: 100%;
-	opacity: 0;
-	animation: change-img-anim 48s infinite;
+  opacity: 0;
+  animation: change-img-anim 48s infinite;
   position: absolute;
   object-fit: cover;
 }
 
-.imgAnim1:nth-of-type(1) {
-    animation-delay: 0s;
-}
-.imgAnim1:nth-of-type(2) {
-    animation-delay: 12s;
-}
-.imgAnim1:nth-of-type(3) {
-    animation-delay: 24s;
-}
-.imgAnim1:nth-of-type(4) {
-    animation-delay: 36s;
-}
+.imgAnim1:nth-of-type(1) { animation-delay: 0s; }
+.imgAnim1:nth-of-type(2) { animation-delay: 12s; }
+.imgAnim1:nth-of-type(3) { animation-delay: 24s; }
+.imgAnim1:nth-of-type(4) { animation-delay: 36s; }
 
 @keyframes change-img-anim {
   0% { opacity: 0; }
