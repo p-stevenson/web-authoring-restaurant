@@ -184,19 +184,34 @@ main {
 }
 
 #main-left {
-  /* outline: 1px solid black; */
-  flex: 1;
-  /* padding: 2rem; */
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: repeat(12, 1fr);
-  gap: 8px;
-  justify-content: center;
-  background-color: rgb(208, 230, 203);
+  display: flex;
+  flex-direction: column;
+  /* outline: 1px solid lime; */
+  background-color: rgb(229, 236, 228);
   min-width: 52.5%;
+  justify-content: center;
 }
 
+#main-logo {
+  /* outline: 3px solid hotpink; */
+  z-index: 999;
+}
+
+.rotated {
+  z-index: 1;
+  position: absolute;
+  flex: 1 1 auto;
+  /* outline: 3px solid red; */
+  float: inherit;
+  rotate: 45deg;
+  height: 75%;
+  background-color: rgb(176, 206, 176);
+  min-width: 15%;
+}
+
+
 #main-right {
+  z-index: 999;
   flex: 1;
 }
 
