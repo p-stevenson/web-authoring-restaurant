@@ -221,6 +221,10 @@ main {
   z-index: 995;
 }
 
+#main-logo {
+  /* outline: 3px solid hotpink; */
+  z-index: 999;
+}
 #main-right {
   /* grid-column: 3 / 4; */
   flex: 1 1 auto;
@@ -231,7 +235,6 @@ main {
   flex-direction: column;
   flex: 1 1 auto;
   min-width: 52.5%;
-  background-color: hotpink;
   min-height: 100%;
   z-index: 995;
 }
@@ -240,13 +243,9 @@ main {
   flex: 1 1 auto;
   background-color: rgb(229, 236, 228);
   min-height: 100%;
-  z-index: 995;
+  z-index: 1;
 }
 
-#main-logo {
-  /* outline: 3px solid hotpink; */
-  z-index: 999;
-}
 
 .rotated {
   z-index: 1;
@@ -258,6 +257,32 @@ main {
   height: 75%;
   background-color: rgb(176, 206, 176);
   min-width: 15%;
+}
+
+#rotated-2 {
+  z-index: 1;
+  position: absolute;
+  flex: 1 1 auto;
+  /* outline: 3px solid red; */
+  float: inherit;
+  rotate: -45deg;
+  height: 75%;
+  background-color: rgb(209, 208, 209);
+  min-width: 50%;
+    box-shadow:-0.5px -0.5px 2px rgba(0, 0, 0, 0.123);
+}
+
+#rotated-3 {
+  z-index: 2;
+  position: absolute;
+  flex: 1 1 auto;
+  /* outline: 3px solid red; */
+  float: inherit;
+  rotate: 45deg;
+  height: 75%;
+  background-color: rgb(211, 226, 209);
+  min-width: 15%;
+    box-shadow: 0.5px 0.5px 2px rgba(0, 0, 0, 0.158);
 }
 
 /* ----- image animation ----- */
