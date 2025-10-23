@@ -287,79 +287,62 @@ main {
   flex: 1 1 auto;
   min-height: calc(100vh - 2rem);
   z-index: 999;
+  display: flex;
 }
 
 #main-left-2 {
-  grid-template-columns: 1/2;
-  grid-template-rows: 1;
-  display: flex;
+  grid-column: 1/2;
+  grid-row: 1;
   z-index: 995;
 }
 
 #main-right-2 {
-  grid-template-columns: 2/3;
-  grid-template-rows: 1;
-  display: flex;
+  grid-column: 2/3;
+  grid-row: 1;
   background-color: rgb(229, 236, 228);
   z-index: 1;
+  position: relative;
+}
 
+/* ----- rotated elements ----- */
+.rotated {
+  position: absolute;
+  box-shadow: -12px 12px 2px rgba(0, 0, 0, 0.123);
+  z-index: 1;
 }
 
 #rotated-1 {
-  z-index: 1;
-  flex: 1 1 auto;
-  /* outline: 3px solid red; */
-  float: inherit;
-  /* rotate: 45deg; */
   height: 60rem;
   background-color: rgb(176, 206, 176);
   min-width: 15%;
-  box-shadow: -12px 12px 2px rgba(0, 0, 0, 0.123);
   transform: rotate(calc(var(--rotate-rotated) + 45deg));
-  transition: transform 8s ease-out;
-  position: absolute;
-}
-
-#rotated-4 {
-  z-index: 1;
-  position: absolute;
-  flex: 1 1 auto;
-  /* outline: 3px solid red; */
-  float: inherit;
-  rotate: 45deg;
-  height: 45rem;
-  background-color: rgb(209, 231, 209);
-  min-width: 15%;
-  box-shadow: -12px 12px 2px rgba(0, 0, 0, 0.123);
-  transform: rotate(calc(var(--rotate-rotated) + -180deg));
-  transition: transform 10s ease-out;
+  transition: transform 8s linear;
 }
 
 #rotated-2 {
-  z-index: 1;
-  position: absolute;
-  flex: 1 1 auto;
-  /* outline: 3px solid red; */
-  float: inherit;
-  rotate: -45deg;
   height: 75%;
   background-color: rgb(209, 208, 209);
   min-width: 50%;
-  /* box-shadow:-0.5px -0.5px 2px rgba(0, 0, 0, 0.123); */
-  box-shadow: -12px 12px 2px rgba(0, 0, 0, 0.123);
+  z-index: 1;
+  rotate: -45deg;
 }
 
 #rotated-3 {
-  z-index: 2;
-  position: absolute;
-  flex: 1 1 auto;
-  /* outline: 3px solid red; */
-  float: inherit;
-  rotate: 45deg;
   height: 75%;
   background-color: rgb(211, 226, 209);
   min-width: 15%;
+  z-index: 2;
+  rotate: 45deg;
   box-shadow: 0.5px 0.5px 2px rgba(0, 0, 0, 0.158);
+}
+
+#rotated-4 {
+  height: 45rem;
+  background-color: rgb(209, 231, 209);
+  min-width: 15%;
+  rotate: 45deg;
+  transform: rotate(calc(var(--rotate-rotated) + -180deg));
+  transition: transform 10s linear;
 }
 
 /* ----- image animation ----- */
@@ -426,10 +409,10 @@ main {
 
 @keyframes rotateOnScroll {
   from {
-    --scroll-rotation: 0deg;
+    --rotate-rotated: 0deg;
   }
   to {
-    --scroll-rotation: 360deg; /* Adjust the final rotation as needed */
+    --rotate-rotated: 360deg; /* Adjust the final rotation as needed */
   }
 }
 
