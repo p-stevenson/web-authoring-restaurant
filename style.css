@@ -79,9 +79,9 @@ h6 {
   isolation: isolate;
 }
 
-:root {
-  --rotate-rotated: 0deg;
-}
+/* :root {
+  --rotate-rotated: 0deg;w
+} */
 
 /* ----- main styling ----- */
 html {
@@ -316,13 +316,22 @@ main {
   z-index: 1;
 }
 
+.test {
+  background-color: red;
+  top:50%;
+  height: 100px;
+  width: 100px;
+  position: absolute;
+  z-index: 1000;
+  animation: rotateOnScroll 10s cubic-bezier(0.25, 0.45, 0.45, 0.94) forwards;
+}
+
 #rotated-1 {
   top: 4rem;
   height: 60rem;
   background-color: rgb(176, 206, 176);
   min-width: 15%;
-  transform: rotate(calc(var(--rotate-rotated) + 45deg));
-  transition: transform 8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  animation: slideDown 10s cubic-bezier(0.25, 0.45, 0.45, 0.94) forwards;
 }
 
 #rotated-2 {
@@ -347,10 +356,7 @@ main {
   top: 4rem;
   background-color: rgb(209, 231, 209);
   min-width: 15%;
-  rotate: 45deg;
-  transform: rotate(calc(var(--rotate-rotated) + -180deg));
-  /* transition: transform 9s linear; */
-  transition: transform 10s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  animation: rotate405 10s cubic-bezier(0.25, 0.45, 0.45, 0.94) forwards;
   z-index: 3;
 }
 
@@ -432,12 +438,33 @@ main {
   animation-delay: 36s;
 }
 
-@keyframes rotateOnScroll {
+@keyframes rotate45 {
   from {
-    --rotate-rotated: 0deg;
+    transform: rotate(0deg);
   }
   to {
-    --rotate-rotated: 360deg; /* Adjust the final rotation as needed */
+    transform: rotate(45deg); /* Adjust the final rotation as needed */
+  }
+}
+@keyframes rotate405 {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(45deg); /* Adjust the final rotation as needed */
+  }
+}
+
+@keyframes slideDown {
+  from {
+    transform: rotate(0deg) translateX(80vw);
+    opacity: 0.7;
+    background-color: rgb(229, 236, 228);
+  }
+  to {
+    transform: rotate(-135deg) translateX(25%);
+    opacity: 1;
+    background-color: rgb(172, 157, 164);
   }
 }
 
