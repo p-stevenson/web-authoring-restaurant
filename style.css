@@ -335,16 +335,17 @@ main {
       justify-content: right;
       top: 1rem;
       right: 1rem ;
+      color: #2d383a;
 }
 
 #part-1 {
   font-family: 'BehindNineties-Italic';
-  font-size: 2rem;
+  font-size: 3rem;
 }
 
 #part-2 {
   font-family: 'BehindNineties-Upright';
-  font-size: 2rem;
+  font-size: 3rem;
 }
 
 #main-right {
@@ -371,17 +372,67 @@ main {
 }
 
 #main-right-2 {
+  /* outline: 8px solid red; */
+  outline-offset: -8px;
   grid-column: 2/3;
   grid-row: 1;
   background-color: rgb(229, 236, 228);
   z-index: 4;
   position: relative;
+  display: flex;
 }
 
-/* ----- rotated elements ----- */
-.rotated {
-  position: absolute;
-  z-index: 1;
+#menu-container {
+  display: flex;
+  flex: 1 1 auto;
+  min-width: 100%;
+  height: 100%;
+  justify-content: space-around;
+}
+
+ul#menu {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+}
+.menu-item {
+  flex: 1 1 auto;
+  display: grid;
+  grid-template-areas: "id category arrow";
+  grid-template-columns: auto 10fr auto;
+  height: 2rem;
+  gap: 1rem;
+  align-items: center;
+  border-bottom: 1px solid black;
+  margin-right: 3rem;
+} 
+
+.menu-item-id {
+  grid-area: id;
+}
+
+.menu-category {
+  grid-area: category;
+  justify-self: center;
+  font-family: 'BehindNineties-Upright';
+  font-size: 4rem;
+}
+
+.menu-item button {
+  grid-area: arrow;
+}
+
+ul {
+  list-style-type: none;
+}
+
+#id-001 {
+  grid-column: 1/2;
+  grid-row: 1;
+}
+
+.menu-category {
+  grid-column: 2/3;
 }
 
 /* ----- image animation ----- */
@@ -393,6 +444,7 @@ main {
   background-color: #1a1a1a;
 }
 
+/* TODO make image switch time shorter to match closer logo animation */
 .imgAnim1 {
   width: 100%;
   height: 100%;
