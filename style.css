@@ -263,19 +263,88 @@ main {
   grid-column: 1/2;
   grid-row: 1;
   display: flex;
+  flex-direction: column;
   min-width: 52.5%;
   /* outline: 5px solid lime; */
   outline-offset: -5px;
-  background-color: rgb(229, 236, 228);
+  /* background-color: rgb(229, 236, 228); */
+  /* FIXME Convert images to WEBP or maybe AVIF */
+  background-image: url(images/ice-flow-001.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
   justify-content: center;
   z-index: 995;
 }
 
-#main-logo {
-  /* outline: 3px solid hotpink; */
-  z-index: 999;
-  animation: slideUpIn 10s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
-  position: relative;
+/* FIXME not entirely happy with card size vs main-logo
+    needs media queries */
+    
+    #color-block-1 {
+      position: absolute;
+      min-height: 8rem;
+      max-height: 16rem;
+      height: 12rem;
+      top: 50%;
+      width: 100%;
+      background-color: #97ABAF;
+      /* animation: slideFromRight1 1s linear forwards; */
+      animation: slideLeft1 4s cubic-bezier(0.33, 1, 0.68, 1) 0s 1 normal forwards;
+      z-index: 1;
+      box-shadow: -8px 8px 2px rgba(0, 0, 0, 0.123);
+      
+    }
+    
+    #color-block-2 {
+      position: absolute;
+      min-height: 8rem;
+      max-height: 16rem;
+      height: 12rem;
+      top: 50%;
+      right: 50%;
+      width: 45%;
+      background-color: #c5deeb;
+      /* animation: slideFromRight2 2s linear forwards; */
+      animation: slideLeft2 4.2s cubic-bezier(0.33, 1, 0.68, 1) 0s 1 normal forwards;
+      z-index: 2;
+      box-shadow: -2px 2px 2px rgba(0, 0, 0, 0.123);
+    }
+    
+    #rotated-5 {
+      position: absolute;
+      min-height: 8rem;
+      max-height: 16rem;
+      height: 12rem;
+      background-color: white;
+      /* min-width: 100%; */
+      animation: slideLeft3 4.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+      top: 50%;
+      right: 50%;
+      width: 40.5%;
+      /* justify-self: end; */
+      z-index: 3;
+      margin-left: 6rem;
+      padding-right: 2rem;
+      box-shadow: -2px 2px 2px rgba(0, 0, 0, 0.123);
+    
+    }
+    #main-logo {
+      display: flex;
+      /* outline: 3px solid hotpink; */
+      z-index: 999;
+      position: relative;
+      justify-content: right;
+      top: 1rem;
+      right: 1rem ;
+}
+
+#part-1 {
+  font-family: 'BehindNineties-Italic';
+  font-size: 2rem;
+}
+
+#part-2 {
+  font-family: 'BehindNineties-Upright';
+  font-size: 2rem;
 }
 
 #main-right {
@@ -312,68 +381,7 @@ main {
 /* ----- rotated elements ----- */
 .rotated {
   position: absolute;
-  box-shadow: -12px 12px 2px rgba(0, 0, 0, 0.123);
   z-index: 1;
-}
-
-.test {
-  background-color: red;
-  top:50%;
-  height: 100px;
-  width: 100px;
-  position: absolute;
-  z-index: 1000;
-  animation: rotateOnScroll 10s cubic-bezier(0.25, 0.45, 0.45, 0.94) forwards;
-}
-
-#rotated-1 {
-  top: 4rem;
-  height: 60rem;
-  background-color: rgb(176, 206, 176);
-  min-width: 15%;
-  animation: slideDown 10s cubic-bezier(0.25, 0.45, 0.45, 0.94) forwards;
-}
-
-#rotated-2 {
-  height: 75%;
-  background-color: rgb(209, 208, 209);
-  min-width: 50%;
-  z-index: 1;
-  rotate: -45deg;
-}
-
-#rotated-3 {
-  height: 75%;
-  background-color: rgb(211, 226, 209);
-  min-width: 15%;
-  z-index: 2;
-  rotate: 45deg;
-  box-shadow: 0.5px 0.5px 2px rgba(0, 0, 0, 0.158);
-}
-
-#rotated-4 {
-  height: 45rem;
-  top: 4rem;
-  background-color: rgb(209, 231, 209);
-  min-width: 15%;
-  animation: rotate405 10s cubic-bezier(0.25, 0.45, 0.45, 0.94) forwards;
-  z-index: 3;
-}
-
-/* FIXME not entirely happy with card size vs main-logo
-    needs media queries */
-#rotated-5 {
-  min-height: 8rem;
-  max-height: 16rem;
-  height: 12rem;
-  background-color: white;
-  min-width: 40rem;
-   animation: slideFromRight 9s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
-   top: 50%;
-   justify-self: end;
-   z-index: 2;
-   margin-left: 6rem;
-   padding-right: 2rem;
 }
 
 /* ----- image animation ----- */
@@ -382,6 +390,7 @@ main {
   width: 100%;
   overflow: hidden;
   position: relative;
+  background-color: #1a1a1a;
 }
 
 .imgAnim1 {
@@ -438,56 +447,66 @@ main {
   animation-delay: 36s;
 }
 
-@keyframes rotate45 {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(45deg); /* Adjust the final rotation as needed */
-  }
-}
-@keyframes rotate405 {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(45deg); /* Adjust the final rotation as needed */
-  }
-}
+/* @keyframes myAnim {
+	0% {
+		animation-timing-function: ease-in;
+		opacity: 0;
+		transform: translateX(250px);
+	}
 
-@keyframes slideDown {
-  from {
-    transform: rotate(0deg) translateX(80vw);
-    opacity: 0.7;
-    background-color: rgb(229, 236, 228);
-  }
-  to {
-    transform: rotate(-135deg) translateX(25%);
-    opacity: 1;
-    background-color: rgb(172, 157, 164);
-  }
-}
+	38% {
+		animation-timing-function: ease-out;
+		opacity: 1;
+		transform: translateX(0);
+	}
 
-@keyframes slideUpIn {
-  from {
-    transform: translateY(100vh);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
+	55% {
+		animation-timing-function: ease-in;
+		transform: translateX(32px);
+	}
 
-@keyframes slideFromRight {
-  from {
-    transform: translateX(80%);
-    opacity: 0;
-  }
-  to {
-    transform: translateX(0);
-    opacity: 1;
-  }
+	72% {
+		animation-timing-function: ease-out;
+		transform: translateX(0);
+	}
+
+	85% {
+		animation-timing-function: ease-in;
+		transform: translateX(16px);
+	}
+
+	100% {
+		animation-timing-function: ease-out;
+		transform: translateX(0);
+	}
+} */
+
+@keyframes slideLeft1 {
+	0% {
+		transform: translateX(80vh);
+	}
+
+	100% {
+		transform: translateX(-100px);
+	}
+}
+@keyframes slideLeft2 {
+	0% {
+		transform: translateX(80vh);
+	}
+
+	100% {
+		transform: translateX(0);
+	}
+}
+@keyframes slideLeft3 {
+	0% {
+		transform: translateX(80vh);
+	}
+
+	100% {
+		transform: translateX(0);
+	}
 }
 
 @keyframes change-img-anim {
