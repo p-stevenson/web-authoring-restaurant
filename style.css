@@ -11,9 +11,25 @@
 }
 
 @font-face {
+  font-family: 'BehindNineties-Upright-Rg';
+  src: url(fonts/behindNineties/WOFF2/UPRIGHT/Behind-The-Nineties-Rg.woff2) format('woff2'),
+    url(fonts/behindNineties/WOFF/UPRIGHT/Behind-The-Nineties-Rg.woff) format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
   font-family: 'BehindNineties-Italic';
   src: url(fonts/behindNineties/WOFF2/ITALIC/Behind-The-Nineties-It.woff2) format('woff2'),
     url(fonts/behindNineties/WOFF/ITALIC/Behind-The-Nineties-It.woff) format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'BehindNineties-Italic-Md';
+  src: url(fonts/behindNineties/WOFF2/ITALIC/Behind-The-Nineties-Md-It.woff2) format('woff2'),
+    url(fonts/behindNineties/WOFF/ITALIC/Behind-The-Nineties-Md-It.woff) format('woff');
   font-weight: normal;
   font-style: normal;
 }
@@ -414,17 +430,37 @@ ul#menu {
   border: 1px solid black;
   z-index: 500;
   /* position: relative; */
-  margin: none;
-  padding: none;
-}
-
-#menu-item001:hover #cat-menu-001 {
-  display: flex;
-  flex-direction: column;
-  /* justify-content: center; */
+  margin: 0;
+  padding: 0;
   text-align: center;
 }
 
+#menu-item001:hover #cat-menu-001 {
+  /* display: flex; */
+  flex-direction: column;
+  /* justify-content: center; */
+  text-align: center;
+  display: block;
+}
+
+ul .cat-items {
+  padding: 0;
+  margin: 1rem 0 1rem 0;
+
+}
+
+ul li #cat-item1, #cat-item2 {
+  margin: 1rem;
+}
+
+ul .dish {
+  font-family: 'BehindNineties-Upright-Rg';
+}
+
+ul .dish-description {
+  font-family: 'BehindNineties-Italic-Md';
+  font-weight: bold;
+}
 .menu-item button {
   grid-area: arrow;
   padding: none;
