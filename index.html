@@ -7,103 +7,205 @@
   <title>bistroTitle</title>
 </head>
 <body>
-  <div id="block-left"></div>
+  <div id="layout-sidebar-left"></div>
+
   <nav>
-    <ul class="navLinks1">
-      <li id="menu-li"><a href="#menu">MENU</a></li>
-      <li id="about-li"><a href="#about">ABOUT</a></li>
-      <li id="contact-li"><a href="#contact">CONTACT</a></li>
+    <ul class="primary-nav">
+      <li id="menu-nav-item"><a href="#menu">MENU</a></li>
+      <li id="about-nav-item"><a href="#about">ABOUT</a></li>
+      <li id="contact-nav-item"><a href="#contact">CONTACT</a></li>
     </ul>
-    <ul class="navLinks2">
-      <li id="home-li"><a href="#home"><span id="bistro">bistro</span>Title</a></li>
-      <li id="phoneNumber-li">+353 87555-1234</li>
+    <ul class="secondary-nav">
+      <li id="logo-nav-item"><a href="#home"><span id="bistro">bistro</span>Title</a></li>
+      <li id="phone-nav-item">+353 87555-1234</li>
     </ul>
   </nav>
+
   <main>
-      <div class="card" id="card-1">
-        <div class="container" id="container-1">
-          <div id="main-left">
-            <!-- <img id="main-logo" src="vectors/four-abstract-hand-drawn-circle-frames/bistroTitle-text-006.svg" alt=""> -->
-            <div class="color-block" id='color-block-1'></div>
-            <div class="color-block" id='color-block-2'></div>
-            <div class="rotated" id="rotated-5">
+      <section class="hero-section" id="hero">
+        <div class="container" id="hero-container">
+          <div id="hero-left-panel">
+            <div class="color-block" id='hero-accent-block'></div>
+            <div class="color-block" id='hero-secondary-block'></div>
+            <div class="rotated" id="hero-logo-container">
               <h1 id="main-logo"><span id="part-1">bistro</span><span id="part-2">Title</span></h1>
             </div>
           </div>
-          <div class="container" id="main-right">
+          <div class="container" id="hero-image-gallery">
             <img class="imgAnim1" src="images/liz-brenden-Mktsq968hdg-unsplash.jpg" alt="exterior of the bistro">
             <img class="imgAnim1" src="images/micheile-henderson-kuAXlOcQPJI-unsplash-bistro001-resize.jpg" alt="interior of bistro, wooden tables and chairs by tall bright windows">
             <img class="imgAnim1" src="images/aleksey-cherenkevich-3qGa30vmP-k-unsplash.jpg" alt="plated dish in bistro">
             <img class="imgAnim1" src="images/amit-rana-s7cO-7YJWpY-unsplash.jpg" alt="bistro dining experience">
           </div>
         </div>
-      </div>
-      <div class="card" id="card-2">
-        <div class="container" id="container-2">
-          <div class="container" id="main-left-2">
+      </section>
+      <div class="card" id="menu-section">
+        <div class="container" id="menu-container-main">
+          <div class="container" id="menu-image-gallery">
             <img class="imgAnim2" src="images/toa-heftiba-loS68zG8P38-unsplash.jpg" alt="a wooden table set for breakfast by a window">
             <img class="imgAnim2" src="images/aigars-peda-a_iKAg00LN4-unsplash.jpg" alt="a delicious toasted sandwich, cut in half and displayed on a old wooden chopping board">
             <img class="imgAnim2" src="images/heather-barnes-VHFTd9iM05I-unsplash.jpg" alt="a close up of large healthy looking lettuce leaf">
             <img class="imgAnim2" src="images/pablo-merchan-montes-MXovqM130UI-unsplash.jpg" alt="bistro food preparation">
           </div>
-          <div id="main-right-2">
+          <div id="menu-panel">
             <div id="menu-container">
               <ul id="menu">
-                <li class="menu-item" id="menu-item001">
-                  <p class="menu-item-id" id="id-001">[N]</p>
+                <li class="menu-item" id="appetizers-menu-item">
+                  <p class="menu-item-id" id="appetizers-id">[A]</p>
                   <p class="menu-category">Appetisers</p>
                   <button>A</button>
-                  <div class="cat-menu" id="cat-menu-001">
+                  <div class="cat-menu" id="appetizers-submenu">
                     <ul class="cat-items">
-                      <li id="cat-item1">
-                        <h3 class="dish">Test Item</h3>
-                        <p class="dish-description">some text about that item</p>
+                      <li id="scallops-item">
+                        <h3 class="dish">Pan-Seared scallops</h3>
+                        <p class="dish-description">smokey bacon crisps, black pudding, creamy fish sauce and sourdough croutons.</p>
                       </li>
-                      <li id="cat-item2">
-                        <h3 class="dish">Test Item</h3>
-                        <p class="dish-description">some text about that item</p>
+                      <li id="mussels-item">
+                        <h3 class="dish">West Coast Mussels</h3>
+                        <p class="dish-description">cranberry relish, mesclin leaf salad</p>
                       </li>
-                      <li id="cat-item3">
-                        <h3 class="dish">Test Item</h3>
-                        <p class="dish-description">some text about that item</p>
+                      <li id="salmon-item">
+                        <h3 class="dish">Organic Smoked Salmon</h3>
+                        <p class="dish-description">from The Burren Smoke House & fresh Dublin bay prawns</p>
                       </li>
                     </ul>
                   </div>
                 </li>
-                <li class="menu-item" id="menu-item002">
-                  <p class="menu-item-id" id="id-002">[N]</p>
-                  <p class="menu-category">CATEGORY</p>
-                  <button>A</button>
+                <li class="menu-item" id="mains-menu-item">
+                  <p class="menu-item-id" id="mains-id">[M]</p>
+                  <p class="menu-category">Main Courses</p>
+                  <button>M</button>
+                  <div class="cat-menu" id="mains-submenu">
+                    <ul class="cat-items">
+                      <li id="beef-item">
+                        <h3 class="dish">Slow-Braised Beef Short Rib</h3>
+                        <p class="dish-description">roasted root vegetables, red wine jus, horseradish cream</p>
+                      </li>
+                      <li id="lamb-item">
+                        <h3 class="dish">Herb-Crusted Rack of Lamb</h3>
+                        <p class="dish-description">garlic confit, seasonal greens, mint chimichurri</p>
+                      </li>
+                      <li id="sea-bass-item">
+                        <h3 class="dish">Pan-Seared Sea Bass</h3>
+                        <p class="dish-description">lemon risotto, samphire, brown butter sauce</p>
+                      </li>
+                      <li id="duck-item">
+                        <h3 class="dish">Confit Duck Leg</h3>
+                        <p class="dish-description">cherry gastrique, creamy polenta, wilted spinach</p>
+                      </li>
+                    </ul>
+                  </div>
                 </li>
-                <li class="menu-item" id="menu-item003">
-                  <p class="menu-item-id" id="00">[N]</p>
-                  <p class="menu-category">CATEGORY</p>
-                  <button>A</button>
+                <li class="menu-item" id="sides-menu-item">
+                  <p class="menu-item-id" id="sides-id">[S]</p>
+                  <p class="menu-category">Side Dishes</p>
+                  <button>S</button>
+                  <div class="cat-menu" id="sides-submenu">
+                    <ul class="cat-items">
+                      <li id="potatoes-item">
+                        <h3 class="dish">Truffle Mac & Cheese</h3>
+                        <p class="dish-description">aged gruyere, crispy breadcrumbs, truffle oil</p>
+                      </li>
+                      <li id="asparagus-item">
+                        <h3 class="dish">Grilled Asparagus</h3>
+                        <p class="dish-description">lemon zest, parmesan shavings, olive oil</p>
+                      </li>
+                      <li id="mushrooms-item">
+                        <h3 class="dish">Wild Mushroom Medley</h3>
+                        <p class="dish-description">garlic, fresh herbs, white wine reduction</p>
+                      </li>
+                    </ul>
+                  </div>
                 </li>
-                <li class="menu-item" id="menu-item004">
-                  <p class="menu-item-id" id="00">[N]</p>
-                  <p class="menu-category">CATEGORY</p>
-                  <button>A</button>
+                <li class="menu-item" id="desserts-menu-item">
+                  <p class="menu-item-id" id="desserts-id">[D]</p>
+                  <p class="menu-category">Desserts</p>
+                  <button>D</button>
+                  <div class="cat-menu" id="desserts-submenu">
+                    <ul class="cat-items">
+                      <li id="chocolate-tart-item">
+                        <h3 class="dish">Dark Chocolate Tart</h3>
+                        <p class="dish-description">salted caramel, vanilla bean ice cream, candied hazelnuts</p>
+                      </li>
+                      <li id="panna-cotta-item">
+                        <h3 class="dish">Lemon Panna Cotta</h3>
+                        <p class="dish-description">berry compote, shortbread crumble, mint garnish</p>
+                      </li>
+                      <li id="apple-crumble-item">
+                        <h3 class="dish">Traditional Apple Crumble</h3>
+                        <p class="dish-description">cinnamon custard, oat streusel, local honey drizzle</p>
+                      </li>
+                    </ul>
+                  </div>
                 </li>
-                <li class="menu-item" id="menu-item005">
-                  <p class="menu-item-id" id="00">[N]</p>
-                  <p class="menu-category">CATEGORY</p>
-                  <button>A</button>
+                <li class="menu-item" id="drinks-menu-item">
+                  <p class="menu-item-id" id="drinks-id">[B]</p>
+                  <p class="menu-category">Beverages</p>
+                  <button>B</button>
+                  <div class="cat-menu" id="drinks-submenu">
+                    <ul class="cat-items">
+                      <li id="cocktails-item">
+                        <h3 class="dish">Signature Cocktails</h3>
+                        <p class="dish-description">Bistro Martini, Irish Coffee, Elderflower Fizz</p>
+                      </li>
+                      <li id="beer-item">
+                        <h3 class="dish">Local Craft Beers</h3>
+                        <p class="dish-description">rotating selection from Irish microbreweries</p>
+                      </li>
+                      <li id="non-alcoholic-item">
+                        <h3 class="dish">Fresh Juices & Sodas</h3>
+                        <p class="dish-description">house-made lemonades, artisan sodas, fresh fruit juices</p>
+                      </li>
+                    </ul>
+                  </div>
                 </li>
-                <li class="menu-item" id="menu-item006">
-                  <p class="menu-item-id" id="00">[N]</p>
-                  <p class="menu-category">CATEGORY</p>
-                  <button>A</button>
+                <li class="menu-item" id="specials-menu-item">
+                  <p class="menu-item-id" id="specials-id">[T]</p>
+                  <p class="menu-category">Today's Specials</p>
+                  <button>T</button>
+                  <div class="cat-menu" id="specials-submenu">
+                    <ul class="cat-items">
+                      <li id="special-soup-item">
+                        <h3 class="dish">Chef's Soup of the Day</h3>
+                        <p class="dish-description">ask your server for today's selection</p>
+                      </li>
+                      <li id="catch-of-day-item">
+                        <h3 class="dish">Fresh Catch of the Day</h3>
+                        <p class="dish-description">locally sourced, prepared to your preference</p>
+                      </li>
+                      <li id="seasonal-special-item">
+                        <h3 class="dish">Seasonal Vegetarian Feature</h3>
+                        <p class="dish-description">featuring the best of local seasonal produce</p>
+                      </li>
+                    </ul>
+                  </div>
                 </li>
-                <li class="menu-item" id="menu-item007">
-                  <p class="menu-item-id" id="00">[N]</p>
-                  <p class="menu-category">CATEGORY</p>
-                  <button>A</button>
+                <li class="menu-item" id="wine-menu-item">
+                  <p class="menu-item-id" id="wine-id">[W]</p>
+                  <p class="menu-category">Wine List</p>
+                  <button>W</button>
+                  <div class="cat-menu" id="wine-submenu">
+                    <ul class="cat-items">
+                      <li id="red-wines-item">
+                        <h3 class="dish">Red Wines</h3>
+                        <p class="dish-description">Cabernet Sauvignon, Merlot, Pinot Noir selections</p>
+                      </li>
+                      <li id="white-wines-item">
+                        <h3 class="dish">White Wines</h3>
+                        <p class="dish-description">Chardonnay, Sauvignon Blanc, Riesling varieties</p>
+                      </li>
+                      <li id="sparkling-item">
+                        <h3 class="dish">Sparkling & Champagne</h3>
+                        <p class="dish-description">Prosecco, Cava, premium Champagne selection</p>
+                      </li>
+                    </ul>
+                  </div>
                 </li>
               </ul>
             </div>
           </div>
       </div>
     </main>
-    <div id="block-right"></div>
+    <div id="layout-sidebar-right"></div>
   </body>
+  </html>
