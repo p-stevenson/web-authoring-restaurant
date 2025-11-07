@@ -318,7 +318,7 @@ nav li#home-li a:hover {
 #menu-panel {
   grid-column: 2/3;
   grid-row: 1;
-  background-color: var(--bg-light);
+  background-color: white;
   z-index: 4;
   position: relative;
 }
@@ -387,7 +387,7 @@ nav li#home-li a:hover {
   flex: 1 1 auto;
   min-width: 100%;
   height: 100%;
-  justify-content: space-around;
+  justify-content: space-evenly;
 }
 
 ul#menu {
@@ -418,25 +418,20 @@ ul#menu {
   grid-area: category;
   justify-self: center;
   font-family: 'BehindNineties-Upright';
-  font-size: 2rem;
+  font-size: 1.6rem;
 }
 
-#appetizers-submenu,
-#mains-submenu,
-#sides-submenu,
-#desserts-submenu,
-#drinks-submenu,
-#specials-submenu,
-#wine-submenu {
+.cat-menu {
   grid-area: menu;
   display: none;
   z-index: 500;
-  margin: 0 0 1rem 0;
+  margin: 0 0 0 0;
   padding: 0;
   text-align: center;
+ 
 }
 
-#appetizers-menu-item:hover #appetizers-submenu,
+#appetisers-menu-item:hover #appetisers-submenu,
 #mains-menu-item:hover #mains-submenu,
 #sides-menu-item:hover #sides-submenu,
 #desserts-menu-item:hover #desserts-submenu,
@@ -445,14 +440,14 @@ ul#menu {
 #wine-menu-item:hover #wine-submenu {
   grid-area: menu;
   flex-direction: column;
-  text-align: center;
+  /* text-align: center; */
   display: block;
+  cursor: pointer;
 }
 
 ul .cat-items {
-  padding: 0;
-  margin: 0 0 1rem 0;
-
+  margin: -2rem 0 0 0;
+  padding: 0.5rem 0 0.5rem 0;
 }
 
 ul li #scallops-item, #mussels-item, #salmon-item,
@@ -475,8 +470,8 @@ ul .dish-description {
 }
 .menu-item button {
   grid-area: arrow;
-  padding: none;
-  margin:  none;
+  padding: 0;
+  margin:  0;
 }
 
 /* ----- image animations ----- */
@@ -491,7 +486,7 @@ ul .dish-description {
 }
 
 .imgAnim1 {
-  animation: change-img-anim 40s infinite;
+  animation: change-img-anim 24s infinite;
   outline: 1rem solid white;
   outline-offset: -1rem;
 }
@@ -501,9 +496,9 @@ ul .dish-description {
 }
 
 .imgAnim1:nth-of-type(1) { animation-delay: 0s; }
-.imgAnim1:nth-of-type(2) { animation-delay: 10s; }
-.imgAnim1:nth-of-type(3) { animation-delay: 20s; }
-.imgAnim1:nth-of-type(4) { animation-delay: 30s; }
+.imgAnim1:nth-of-type(2) { animation-delay: 6s; }
+.imgAnim1:nth-of-type(3) { animation-delay: 12s; }
+.imgAnim1:nth-of-type(4) { animation-delay: 18s; }
 
 .imgAnim2:nth-of-type(1) { animation-delay: 0s; }
 .imgAnim2:nth-of-type(2) { animation-delay: 12s; }
