@@ -178,7 +178,7 @@ nav {
   color: var(--header-text-color);
   position: sticky;
   top: 0;
-  z-index: 1001;
+  z-index: 1005;
   padding: 0;
   margin: 0;
 }
@@ -364,18 +364,13 @@ nav li#home-li a:hover {
   position: sticky;
   top: 2rem;
   z-index: 1002;
+  padding-bottom: 100px;
 }
 
-#about-section {
-  height: calc(100vh - 2rem);
-  position: sticky;
-  top: 2rem;
-  z-index: 1003;
-  background-color: hotpink;
-}
+
 #menu-container-main {
   display: grid;
-  grid-template-columns: 5fr 6fr;
+  grid-template-columns: 3fr 6fr;
   grid-template-rows: 1fr;
   max-width: 100%;
   z-index: 1000;
@@ -417,13 +412,9 @@ ul#menu {
   display: grid;
   grid-template-areas:  "id category arrow" 
                         "blank1 menu blank2";
-  grid-template-columns: auto 10fr auto;
+  grid-template-columns: 3fr 6fr 3fr;
   grid-template-rows: 1fr;
-  /* height: 2rem; */
-  /* gap: 1rem; */
   align-items: center;
-  border-bottom: 1px solid black;
-  margin-right: 3rem;
 }
 
 .menu-item .menu-item-id {
@@ -437,19 +428,46 @@ ul#menu {
   font-size: 1.6rem;
 }
 
+.menu-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-bottom: 1px solid rgba(114, 131, 112, 0.555);
+  margin: 0 20% 0 15%;
+}
+
+.menu-category {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 0 5px 0;
+  width: 300px;
+}
+
+.menu-category-reveal {
+  background: none;
+  border: none;
+  padding: 0;
+  display: inline-grid;
+  place-items: center;
+  cursor: pointer;
+  color: var(--header-text-color);
+  content: "";
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 8px solid rgb(114, 131, 112);
+}
+
 .cat-menu {
   grid-area: menu;
   display: none;
   z-index: 500;
   margin: 0 0 0 0;
-  padding: 0;
+  padding: 1rem 0 0 0;
   text-align: center;
 }
-
-/* #about-section {
-  background-color: hotpink;
-  position: relative;
-} */
 
 #appetisers-menu-item:hover #appetisers-submenu,
 #mains-menu-item:hover #mains-submenu,
@@ -481,6 +499,7 @@ ul li #scallops-item, #mussels-item, #salmon-item,
 
 ul .dish {
   font-family: 'BehindNineties-Upright-Rg';
+  font-size: 1.4rem;
 }
 
 ul .dish-description {
@@ -491,6 +510,14 @@ ul .dish-description {
   grid-area: arrow;
   padding: 0;
   margin:  0;
+}
+
+#about-section {
+  position: sticky;
+  /* top: 2rem; */
+  height: 100vh;
+  z-index: 1003;
+  background-color: hotpink;
 }
 
 /* ----- image animations ----- */
