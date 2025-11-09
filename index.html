@@ -6,14 +6,15 @@
   <link rel="stylesheet" href="style.css">
   <title>bistroTitle</title>
 </head>
+
 <body>
   <div id="layout-sidebar-left"></div>
 
   <nav>
     <ul class="primary-nav">
-      <li id="menu-nav-item"><a href="#menu">MENU</a></li>
-      <li id="about-nav-item"><a href="#about">ABOUT</a></li>
-      <li id="contact-nav-item"><a href="#contact">CONTACT</a></li>
+      <li id="menu-nav-item"><a href="#menu-section">MENU</a></li>
+      <li id="about-nav-item"><a href="#about-section">ABOUT</a></li>
+      <!-- <li id="contact-nav-item"><a href="#contact-section">CONTACT</a></li> -->
     </ul>
     <ul class="secondary-nav">
       <li id="logo-nav-item"><a href="#home"><span id="bistro">bistro</span>Title</a></li>
@@ -22,7 +23,7 @@
   </nav>
 
   <main>
-      <section class="hero-section" id="hero">
+      <section class="hero-section" id="hero-section">
         <div class="container" id="hero-container">
           <div id="hero-left-panel">
             <div class="color-block" id='hero-accent-block'></div>
@@ -39,7 +40,7 @@
           </div>
         </div>
       </section>
-      <div class="card" id="menu-section">
+      <section class="card" id="menu-section">
         <div class="container" id="menu-container-main">
           <div class="container" id="menu-image-gallery">
             <img class="imgAnim2" src="images/toa-heftiba-loS68zG8P38-unsplash.jpg" alt="a wooden table set for breakfast by a window">
@@ -51,9 +52,7 @@
             <div id="menu-container">
               <ul id="menu">
                 <li class="menu-item" id="appetisers-menu-item">
-                  <p class="menu-item-id" id="appetizers-id">[A]</p>
                   <p class="menu-category">Appetisers</p>
-                  <button>A</button>
                   <div class="cat-menu" id="appetisers-submenu">
                     <ul class="cat-items">
                       <li id="scallops-item">
@@ -72,9 +71,7 @@
                   </div>
                 </li>
                 <li class="menu-item" id="mains-menu-item">
-                  <p class="menu-item-id" id="mains-id">[M]</p>
                   <p class="menu-category">Main Courses</p>
-                  <button>M</button>
                   <div class="cat-menu" id="mains-submenu">
                     <ul class="cat-items">
                       <li id="beef-item">
@@ -97,9 +94,7 @@
                   </div>
                 </li>
                 <li class="menu-item" id="sides-menu-item">
-                  <p class="menu-item-id" id="sides-id">[S]</p>
                   <p class="menu-category">Side Dishes</p>
-                  <button>S</button>
                   <div class="cat-menu" id="sides-submenu">
                     <ul class="cat-items">
                       <li id="potatoes-item">
@@ -118,9 +113,7 @@
                   </div>
                 </li>
                 <li class="menu-item" id="desserts-menu-item">
-                  <p class="menu-item-id" id="desserts-id">[D]</p>
                   <p class="menu-category">Desserts</p>
-                  <button>D</button>
                   <div class="cat-menu" id="desserts-submenu">
                     <ul class="cat-items">
                       <li id="chocolate-tart-item">
@@ -139,9 +132,7 @@
                   </div>
                 </li>
                 <li class="menu-item" id="drinks-menu-item">
-                  <p class="menu-item-id" id="drinks-id">[B]</p>
                   <p class="menu-category">Beverages</p>
-                  <button>B</button>
                   <div class="cat-menu" id="drinks-submenu">
                     <ul class="cat-items">
                       <li id="cocktails-item">
@@ -160,9 +151,7 @@
                   </div>
                 </li>
                 <li class="menu-item" id="specials-menu-item">
-                  <p class="menu-item-id" id="specials-id">[T]</p>
                   <p class="menu-category">Specials</p>
-                  <button>T</button>
                   <div class="cat-menu" id="specials-submenu">
                     <ul class="cat-items">
                       <li id="special-soup-item">
@@ -181,9 +170,7 @@
                   </div>
                 </li>
                 <li class="menu-item" id="wine-menu-item">
-                  <p class="menu-item-id" id="wine-id">[W]</p>
                   <p class="menu-category">Wine List</p>
-                  <button>W</button>
                   <div class="cat-menu" id="wine-submenu">
                     <ul class="cat-items">
                       <li id="red-wines-item">
@@ -204,7 +191,11 @@
               </ul>
             </div>
           </div>
-      </div>
+        </div>
+      </section>
+      <section id="about-section">
+
+      </section>
     </main>
     <div id="layout-sidebar-right"></div>
   </body>
