@@ -539,54 +539,113 @@ ul .dish-description {
 /* FIXME section 3 overflowing into section 2 or scrolling into view to soon. */
 #events-section {
   position: sticky;
-  height: 100vh;
+  height: calc(100vh - 2rem);
   z-index: 1003;
-  background-color: rgb(208, 232, 207);
-    max-height: calc(100vh - 2rem);
-    overflow: hidden;
+  background-color: rgb(227, 235, 227);
+  display: flex;
+  flex-direction: row;
+  /* outline: 3px solid lawngreen; */
 }
 
-#events-container-main {
-  display: grid;
-  grid-template-columns: 0.9fr 2fr 2fr;
-  grid-template-areas:  'pic1 event1 main'
-                        'pic2 event2 main'
-                        'pic3 event3 main';
-  overflow: hidden;
-  /* max-height: 100%; */
+#event-images-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%; /* Use height instead of max-height */
+  width: 20%;
 }
 
 .event-image {
-  border-right: 1px solid rgb(209, 218, 209);
-  border-bottom: 1px solid rgb(209, 218, 209);
-  /* object-fit: cover; */
+  flex: 1; /* Allows each image to grow and shrink equally */
+  width: 100%; /* Makes the image take the full width of its container */
+  height: 100%; /* Stretches to fill the allocated flex space */
+  object-fit: cover; /* Scales the image to cover the area, cropping as needed to maintain aspect ratio */
+  min-height: 0; /* Prevents flex items from overflowing their container */
 }
 
 #event-image1 {
-  object-fit: cover;
-  grid-area: pic1;
-  width: 100%;
-  height: 100%;
+  border-bottom: 1px solid black;
+  border-right: 1px solid black;
 }
 
 #event-image2 {
-  object-fit: cover;
-  grid-area: pic2;
-  width: 100%;
-  height: 100%;
+  border-bottom: 1px solid black;
+  border-right: 1px solid black;
 }
 
 #event-image3 {
-  object-fit: cover;
-  grid-area: pic3;
-    width: 100%;
-  height: 100%;
+  border-right: 1px solid black;
 }
 
-.event-card {
-  border-bottom: 1px solid rgb(209, 218, 209);
-  border-right: 1px solid rgb(209, 218, 209);
-  background-color: white;
+.event-information-container {
+  display: grid;
+  grid-template-columns:  2fr 3fr;
+  grid-template-areas:  'event1 main'
+                        'event2 main'
+                        'event3 main';
+  grid-template-rows: repeat(3, 1fr);
+  height: calc(100vh - 2rem);
+  width: 100%;
+}
+
+.event-information {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-areas:  'date title'
+                        'date information'
+                        'button button';
+}
+
+#event1 {
+  grid-area: event1;
+  border-bottom: 1px solid black;
+}
+#event2 {
+  grid-area: event2;
+  border-bottom: 1px solid black;
+}
+#event3 {
+  grid-area: event3;
+  border-bottom: 1px solid black;
+}
+
+.event-title {
+  grid-area: title;
+  font-family: 'BehindNineties-Italic-Md';
+}
+.event-information-text {
+  grid-area: information;
+  font-family: 'Nunito Sans', sans-serif;
+
+}
+
+.event-button {
+  grid-area: button;
+  font-family: 'Nunito Sans', sans-serif;
+  text-decoration: underline;
+  border: none;
+  background: none;
+  padding: none;
+  margin: none;
+  text-align: left;
+}
+
+.event-button:hover {
+  cursor: pointer;
+}
+
+.event-date {
+  grid-area: date;
+  font-family: 'Nunito Sans', sans-serif;
+}
+
+
+
+
+/* .event-card {
+  align-self: stretch;
+  justify-self: stretch;
+  height: 100%;
+  box-sizing: border-box;
 }
 #event1 {
   grid-area: event1;
@@ -613,7 +672,7 @@ ul .dish-description {
   object-fit: cover;
   border-top: 1px solid rgb(209, 218, 209);
   border-bottom: 1px solid rgb(209, 218, 209);
-}
+} */
               
 /* ----- image animations ----- */
 .imgAnim1,

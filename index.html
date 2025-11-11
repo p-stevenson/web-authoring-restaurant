@@ -7,10 +7,8 @@
   <link rel="stylesheet" href="style.css">
   <title>bistroTitle</title>
 </head>
-
 <body>
   <div id="layout-sidebar-left"></div>
-
   <nav>
     <!-- FIXME Nav buttons only working in one direction. -->
     <ul class="primary-nav">
@@ -23,7 +21,6 @@
       <li id="phone-nav-item">+353 87555-1234</li>
     </ul>
   </nav>
-
   <main>
     <section class="hero-section" id="hero-section">
       <div class="container" id="hero-container">
@@ -210,23 +207,36 @@
       </div>
     </section>
     <section id="events-section">
-      <div class="container" id="events-container-main">
-        <img src="images/resized/christmas-pudding-1920-2400.jpg" alt="3 delicious choclate frosted ring donuts stacked on top of each other" class="event-image" id="event-image1">
-        <div class="event-card" id="event1">
-          <p class="event-information" id="event1-information">some text about the event</p>
-          <button id="event1-button">book now</button>
+      <div id="event-images-container">
+          <img src="images/resized/christmas-pudding-1920-2400.jpg" alt="3 delicious choclate frosted ring donuts stacked on top of each other" class="event-image" id="event-image1">
+          <img src="images/resized/3-donuts-stacked-1920-2400.jpg" alt="pasta wrapped around a fork held over a clean white bowl" class="event-image" id="event-image2">
+          <img src="images/resized/mixology-1920-2400.jpg" alt="fresh vegetables, carrots, courgettes, yellow, green and red peppers, lettuce all in a pile" class="event-image" id="event-image3">
         </div>
-        <img src="images/resized/3-donuts-stacked-1920-2400.jpg" alt="pasta wrapped around a fork held over a clean white bowl" class="event-image" id="event-image2">
-        <div class="event-card" id="event2">
-          <p class="event-information" id="event2-information">some text about the event</p>
-          <button id="event2-button">book now</button>
+      <div class="event-information-container">
+        <div class="event-information" id="event1">
+          <h2 class="event-title" id="event-title-1">Christmas Baking Class</h2>
+          <p class="event-date" id="event-1-date">datetime</p>
+          <p class="event-information-text" id="event1-text">
+            Master the art of festive baking in our Christmas workshop. Learn to craft traditional holiday treats like spiced gingerbread and classic mince pies, perfect for sharing with loved ones.
+          </p>
+          <button type="button" class="event-button" id="event1-button">BOOK NOW</button>
         </div>
-        <img src="images/resized/mixology-1920-2400.jpg" alt="fresh vegetables, carrots, courgettes, yellow, green and red peppers, lettuce all in a pile" class="event-image" id="event-image3">
-        <div class="event-card" id="event3">
-          <p class="event-information" id="event3-information">some text about the event</p>
-          <button id="event3-button">book now</button>
+        <div class="event-information" id="event2">
+          <h2 class="event-title" id="event-title-1">Donut Decorating Fun</h2>
+          <p class="event-date" id="event-2-date">datetime</p>
+          <p class="event-information-text" id="event2-text">
+            Unleash your inner artist at our fun-filled donut decorating class! A perfect activity for all ages to design, create, and devour your own delicious, sprinkle-covered masterpieces.
+          </p>
+          <button type="button" class="event-button" id="event2-button">BOOK NOW</button>
         </div>
-        <img src="images/lum3n-5GK0KjhBLs4-unsplash.jpg" alt="" id="event-main-image">  
+        <div class="event-information" id="event3">
+          <h2 class="event-title" id="event-title-1">Mixology Evening</h2>
+          <p class="event-date" id="event-3-date">datetime</p>
+          <p class="event-information-text" id="event3-text">
+            Discover the secrets of the perfect cocktail in our evening mixology class. Join our expert bartenders to shake, stir, and sip your way through an array of classic and signature drinks.
+          </p>
+          <button type="button" class="event-button" id="event3-button">BOOK NOW</button>
+        </div>
       </div>
     </section>
   </main>
