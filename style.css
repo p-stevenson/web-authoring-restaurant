@@ -628,6 +628,7 @@ ul .dish-description {
   border: none;
   background: none;
   padding: none;
+  margin: none;
   text-align: left;
 }
 
@@ -647,43 +648,7 @@ ul .dish-description {
   height: calc(100vh - 2rem);
   width: 100%;
 }
-
-
-
-
-/* .event-card {
-  align-self: stretch;
-  justify-self: stretch;
-  height: 100%;
-  box-sizing: border-box;
-}
-#event1 {
-  grid-area: event1;
-}
-#event1-button {
-  grid-area: event1;
-}
-#event2 {
-  grid-area: event2;
-}
-#event2-button {
-  grid-area: event2;
-}
-#event3 {
-  grid-area: event3;
-}
-#event3-button {
-  grid-area: event3;
-}
-
-#event-main-image {
-  grid-area: main;
-  height: 100vh;
-  object-fit: cover;
-  border-top: 1px solid rgb(209, 218, 209);
-  border-bottom: 1px solid rgb(209, 218, 209);
-} */
-              
+      
 /* ----- image animations ----- */
 .imgAnim1,
 .imgAnim2 {
