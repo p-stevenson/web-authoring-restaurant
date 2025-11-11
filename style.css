@@ -578,7 +578,7 @@ ul .dish-description {
 
 .event-information-container {
   display: grid;
-  grid-template-columns:  2fr 3fr;
+  grid-template-columns:  3fr 2fr;
   grid-template-areas:  'event1 main'
                         'event2 main'
                         'event3 main';
@@ -592,7 +592,7 @@ ul .dish-description {
   grid-template-columns: 1fr 2fr;
   grid-template-areas:  'date title'
                         'date information'
-                        'button button';
+                        'date button';
 }
 
 #event1 {
@@ -611,10 +611,13 @@ ul .dish-description {
 .event-title {
   grid-area: title;
   font-family: 'BehindNineties-Italic-Md';
+  margin: 4rem 0 0 0;
+  font-size: 2.2rem;
 }
 .event-information-text {
   grid-area: information;
   font-family: 'Nunito Sans', sans-serif;
+  padding: 0 5rem 0 0;
 
 }
 
@@ -625,7 +628,6 @@ ul .dish-description {
   border: none;
   background: none;
   padding: none;
-  margin: none;
   text-align: left;
 }
 
@@ -636,6 +638,14 @@ ul .dish-description {
 .event-date {
   grid-area: date;
   font-family: 'Nunito Sans', sans-serif;
+  margin: 4.4rem 0 0 2rem;
+}
+
+#event-section-main-image{
+  grid-area: main;
+  object-fit: cover;
+  height: calc(100vh - 2rem);
+  width: 100%;
 }
 
 
