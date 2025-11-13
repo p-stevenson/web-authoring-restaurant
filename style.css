@@ -535,8 +535,6 @@ ul .dish-description {
   color: rgb(39, 39, 39);
 }
 
-/* FIXME grid not scaling to fit event-images correctly */
-/* FIXME section 3 overflowing into section 2 or scrolling into view to soon. */
 #events-section {
   position: sticky;
   height: calc(100vh - 2rem);
@@ -593,6 +591,7 @@ ul .dish-description {
   grid-template-areas:  'date title'
                         'date information'
                         'date button';
+  position: relative;
 }
 
 #event1 {
@@ -632,9 +631,9 @@ ul .dish-description {
   text-align: left;
 }
 
-.event-button:hover {
+/* .event-button:hover {
   cursor: pointer;
-}
+} */
 
 .event-date {
   grid-area: date;
@@ -648,7 +647,71 @@ ul .dish-description {
   height: calc(100vh - 2rem);
   width: 100%;
 }
-      
+
+
+#event-booking-form {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -80%);
+  background-color: red;
+  width: 500px;
+  outline: red;
+  /* position: relative; */
+  z-index: 1018;
+  display: none;
+  position: absolute;
+
+}
+
+#booking-form {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  gap: 1rem;
+  font-family: 'Nunito Sans', sans-serif;
+  height: 100%;
+  width: 100%;
+  background-color: var(--bg-light);
+  color: var(--text-dark);
+  border: 1px solid var(--text-dark);
+  box-shadow: 5px 5px 15px var(--shadow-medium);
+}
+
+#booking-form label {
+  font-weight: bold;
+}
+
+#booking-form input,
+#booking-form select {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+#booking-form button {
+  padding: 0.75rem;
+  background-color: var(--text-dark);
+  color: var(--bg-light);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-top: 1rem;
+}
+
+#booking-form button:hover {
+  background-color: #4a5c5e;
+}
+
+#event-submit-button {
+  text-align: center;
+}
+
+
+.event-button:hover + #event-booking-form,
+#event-booking-form:hover {
+  display: block;
+}
 /* ----- image animations ----- */
 .imgAnim1,
 .imgAnim2 {

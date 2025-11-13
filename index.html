@@ -236,8 +236,26 @@
             Discover the secrets of the perfect cocktail in our evening mixology class. Join our expert bartenders to shake, stir, and sip your way through an array of classic and signature drinks.
           </p>
           <button type="button" class="event-button" id="event3-button">BOOK NOW</button>
+          <div class="form-container" id="event-booking-form">
+            <form action="#" method="post" id="booking-form">
+              <h3>Book Your Spot for Mixology Madness</h3>
+              <label for="booking-name">Full Name:</label>
+              <input type="text" id="booking-name" name="booking_name" required>
+
+              <label for="booking-email">Email:</label>
+              <input type="email" id="booking-email" name="booking_email" required>
+
+              <label for="booking-phone">Phone Number:</label>
+              <input type="tel" id="booking-phone" name="booking_phone">
+
+              <label for="num-guests">Number of Guests:</label>
+              <input type="number" id="num-guests" name="num_guests" min="1" value="1" required>
+
+              <button type="submit" class="event-button" id="event-submit-button">SUBMIT</button>
+            </form>
+          </div>
         </div>
-          <img src="images/alexandra-kikot-mjP6MQz834E-unsplash.jpg" alt="" id="event-section-main-image"> 
+        <img src="images/alexandra-kikot-mjP6MQz834E-unsplash.jpg" alt="" id="event-section-main-image"> 
       </div>
     </section>
   </main>
