@@ -214,12 +214,30 @@
         </div>
       <div class="event-information-container">
         <div class="event-information" id="event1">
-          <h2 class="event-title" id="event-title-1">Christmas Bakers</h2>
+          <h2 class="event-title" id="event-title-1">Christmas Baker</h2>
           <p class="event-date" id="event-1-date">28\11\2025</p>
           <p class="event-information-text" id="event1-text">
             Master the art of festive baking in our Christmas workshop. Learn to craft traditional holiday treats like spiced gingerbread and classic mince pies, perfect for sharing with loved ones.
           </p>
           <button type="button" class="event-button" id="event1-button">BOOK NOW</button>
+                    <div class="form-container" id="event1-booking-form">
+            <form action="#" method="post" id="booking-form">
+              <h3>Book Your Spot for Christmas Baker</h3>
+              <label for="booking-name">Full Name:</label>
+              <input type="text" id="booking-name" name="booking_name" required>
+
+              <label for="booking-email">Email:</label>
+              <input type="email" id="booking-email" name="booking_email" required>
+
+              <label for="booking-phone">Phone Number:</label>
+              <input type="tel" id="booking-phone" name="booking_phone">
+
+              <label for="num-guests">Number of Guests:</label>
+              <input type="number" id="num-guests" name="num_guests" min="1" value="1" required>
+
+              <button type="submit" class="event-button" id="event-submit-button">SUBMIT</button>
+            </form>
+          </div>
         </div>
         <div class="event-information" id="event2">
           <h2 class="event-title" id="event-title-1">Donut Decorating Fun</h2>
@@ -228,6 +246,24 @@
             Unleash your inner artist at our fun-filled donut decorating class! A perfect activity for all ages to design, create, and devour your own delicious, sprinkle-covered masterpieces.
           </p>
           <button type="button" class="event-button" id="event2-button">BOOK NOW</button>
+                    <div class="form-container" id="event2-booking-form">
+            <form action="#" method="post" id="booking-form">
+              <h3>Book Your Spot for Donut Decorating Fun</h3>
+              <label for="booking-name">Full Name:</label>
+              <input type="text" id="booking-name" name="booking_name" required>
+
+              <label for="booking-email">Email:</label>
+              <input type="email" id="booking-email" name="booking_email" required>
+
+              <label for="booking-phone">Phone Number:</label>
+              <input type="tel" id="booking-phone" name="booking_phone">
+
+              <label for="num-guests">Number of Guests:</label>
+              <input type="number" id="num-guests" name="num_guests" min="1" value="1" required>
+
+              <button type="submit" class="event-button" id="event-submit-button">SUBMIT</button>
+            </form>
+          </div>
         </div>
         <div class="event-information" id="event3">
           <h2 class="event-title" id="event-title-1">Mixology Madness</h2>
@@ -236,7 +272,7 @@
             Discover the secrets of the perfect cocktail in our evening mixology class. Join our expert bartenders to shake, stir, and sip your way through an array of classic and signature drinks.
           </p>
           <button type="button" class="event-button" id="event3-button">BOOK NOW</button>
-          <div class="form-container" id="event-booking-form">
+          <div class="form-container" id="event3-booking-form">
             <form action="#" method="post" id="booking-form">
               <h3>Book Your Spot for Mixology Madness</h3>
               <label for="booking-name">Full Name:</label>
