@@ -610,7 +610,7 @@ ul .dish-description {
 .event-title {
   grid-area: title;
   font-family: 'BehindNineties-Italic-Md';
-  margin: 4rem 0 0 0;
+  margin: 2rem 0 0 0;
   font-size: clamp(1.2rem, 1rem + 0.5vw, 2.2rem);
 }
 
@@ -641,7 +641,7 @@ ul .dish-description {
   grid-area: date;
   font-family: 'Nunito Sans', sans-serif;
   font-size: clamp(0.9rem, 0.8rem + 0.25vw, 1.1rem);
-  margin: 4.4rem 0 0 2rem;
+  margin: 2.4rem 0 0 2rem;
 }
 
 #event-section-main-image{
