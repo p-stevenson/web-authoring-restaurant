@@ -10,18 +10,18 @@
 <body>
   <div id="layout-sidebar-left"></div>
   <nav>
-    <!-- FIXME Nav buttons only working in one direction. -->
     <ul class="primary-nav">
-      <li id="menu-nav-item"><a href="#menu-section">MENU</a></li>
-      <li id="about-nav-item"><a href="#events-section">EVENTS</a></li>
+      <li id="menu-nav-item"><a href="#menu-section-jump">MENU</a></li>
+      <li id="about-nav-item"><a href="#events-section-jump">EVENTS</a></li>
       <!-- <li id="contact-nav-item"><a href="#contact-section">CONTACT</a></li> -->
     </ul>
     <ul class="secondary-nav">
-      <li id="logo-nav-item"><a href="#hero-section"><span id="bistro">bistro</span>Title</a></li>
+      <li id="logo-nav-item"><a href="#hero-section-jump"><span id="bistro">bistro</span>Title</a></li>
       <li id="phone-nav-item">+353 87555-1234</li>
     </ul>
   </nav>
   <main>
+    <div id="hero-section-jump"></div>
     <section class="hero-section" id="hero-section">
       <div class="container" id="hero-container">
         <div id="hero-left-panel">
@@ -40,8 +40,9 @@
         </div>
       </div>
     </section>
-    <!-- TODO remove animation from menu image on left, just use icepop -->
+    <!-- TODO change these images -->
     <section class="card" id="menu-section">
+      <div id="menu-section-jump"></div>
       <div class="container" id="menu-container-main">
         <div class="container" id="menu-image-gallery">
           <img class="imgAnim2" src="images/toa-heftiba-loS68zG8P38-unsplash.jpg"
@@ -207,6 +208,7 @@
       </div>
     </section>
     <section id="events-section">
+      <div id="events-section-jump"></div>
       <div id="event-images-container">
           <img src="images/resized/christmas-pudding-1920-2400.jpg" alt="3 delicious choclate frosted ring donuts stacked on top of each other" class="event-image" id="event-image1">
           <img src="images/resized/3-donuts-stacked-1920-2400.jpg" alt="pasta wrapped around a fork held over a clean white bowl" class="event-image" id="event-image2">
@@ -220,7 +222,7 @@
             Master the art of festive baking in our Christmas workshop. Learn to craft traditional holiday treats like spiced gingerbread and classic mince pies, perfect for sharing with loved ones.
           </p>
           <button type="button" class="event-button" id="event1-button">BOOK NOW</button>
-                    <div class="form-container" id="event1-booking-form">
+            <div class="form-container" id="event1-booking-form">
             <form action="#" method="post" id="booking-form">
               <h3>Book Your Spot for Christmas Baker</h3>
               <label for="booking-name">Full Name:</label>
@@ -246,7 +248,7 @@
             Unleash your inner artist at our fun-filled donut decorating class! A perfect activity for all ages to design, create, and devour your own delicious, sprinkle-covered masterpieces.
           </p>
           <button type="button" class="event-button" id="event2-button">BOOK NOW</button>
-                    <div class="form-container" id="event2-booking-form">
+            <div class="form-container" id="event2-booking-form">
             <form action="#" method="post" id="booking-form">
               <h3>Book Your Spot for Donut Decorating Fun</h3>
               <label for="booking-name">Full Name:</label>

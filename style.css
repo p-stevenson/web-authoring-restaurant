@@ -664,7 +664,7 @@ ul .dish-description {
 }
 
 #event1-booking-form {
-  top: 60%;
+  top: 110%;
   left: 50%;
 }
 
@@ -674,7 +674,7 @@ ul .dish-description {
 }
 
 #event3-booking-form {
-  top: 50%;
+  top: 70%;
   left: 50%;
 }
 
@@ -723,10 +723,12 @@ ul .dish-description {
 }
 
 
-.event-button:hover + #event3-booking-form,
-.event3-booking-form:hover,
+.event-button:hover + #event1-booking-form,
+#event1-booking-form:hover,
 .event-button:hover + #event2-booking-form,
-.event3-booking-form:hover {
+#event2-booking-form:hover, 
+.event-button:hover + #event3-booking-form,
+#event3-booking-form:hover {
   display: block;
 }
 /* ----- image animations ----- */
