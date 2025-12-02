@@ -168,6 +168,7 @@ main {
   position: relative;
   background-color: var(--nav-bg);
 }
+
 /* ----- navigation ----- */
 nav {
   grid-column: 2 / 3;
@@ -364,7 +365,6 @@ nav li#home-li a:hover {
   display: flex;
 }
 
-
 #menu-section {
   position: sticky;
   top: 2rem;
@@ -381,8 +381,6 @@ nav li#home-li a:hover {
   z-index: 1000;
   box-shadow: var(--shadow-light);
 }
-
-
 
 #menu-image-gallery {
   grid-column: 1/2;
@@ -524,6 +522,7 @@ ul .dish-description {
   font-size: 1rem;
   color: black;
 }
+
 .menu-item button {
   grid-area: arrow;
   padding: 0;
@@ -542,22 +541,33 @@ ul .dish-description {
   background-color: rgb(227, 235, 227);
   display: flex;
   flex-direction: row;
-  /* outline: 3px solid lawngreen; */
 }
+
+/* TODO Move this */
+
+#about-section {
+  position: sticky;
+  height: calc(100vh - 2rem);
+  z-index: 1004;
+  background-color: rgb(227, 235, 227);
+  display: flex;
+  flex-direction: row;
+}
+
 
 #event-images-container {
   display: flex;
   flex-direction: column;
-  height: 100%; /* Use height instead of max-height */
+  height: 100%; 
   width: 20%;
 }
 
 .event-image {
-  flex: 1; /* Allows each image to grow and shrink equally */
-  width: 100%; /* Makes the image take the full width of its container */
-  height: 100%; /* Stretches to fill the allocated flex space */
-  object-fit: cover; /* Scales the image to cover the area, cropping as needed to maintain aspect ratio */
-  min-height: 0; /* Prevents flex items from overflowing their container */
+  flex: 1; 
+  width: 100%; 
+  height: 100%; 
+  object-fit: cover; 
+  min-height: 0; 
 }
 
 #event-image1 {
@@ -633,10 +643,6 @@ ul .dish-description {
   text-align: left;
 }
 
-/* .event-button:hover {
-  cursor: pointer;
-} */
-
 .event-date {
   grid-area: date;
   font-family: 'Nunito Sans', sans-serif;
@@ -650,7 +656,6 @@ ul .dish-description {
   height: calc(100vh - 2rem);
   width: 100%;
 }
-
 
 #event1-booking-form, #event2-booking-form, #event3-booking-form {
   transform: translate(-50%, -80%);
@@ -722,7 +727,6 @@ ul .dish-description {
   text-align: center;
 }
 
-
 .event-button:hover + #event1-booking-form,
 #event1-booking-form:hover,
 .event-button:hover + #event2-booking-form,
@@ -731,6 +735,7 @@ ul .dish-description {
 #event3-booking-form:hover {
   display: block;
 }
+
 /* ----- image animations ----- */
 .imgAnim1,
 .imgAnim2 {
@@ -739,8 +744,7 @@ ul .dish-description {
   opacity: 0;
   position: absolute;
   object-fit: cover;
-}  /* margin: 0 0 px 0; */
-
+}
 
 .imgAnim1 {
   animation: change-img-anim 24s infinite;
