@@ -734,9 +734,41 @@ ul .dish-description {
   z-index: 1004;
   background-color: white;
   display: flex;
-  flex-direction: row;
+  /* flex-direction: row; */
   box-shadow: 0px 2px 12px 8px rgba(0, 0, 0, 0.2);
+}
 
+#about-section-container {
+  display: grid;
+  grid-template-areas:  'about map'
+                        'contact contact';
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 2fr 1fr;
+  width: 100%;
+}
+
+#about-information-container {
+  grid-area: about;
+  width: 100%;
+  background-color: hotpink;
+}
+
+#map-container {
+  grid-area: map;
+  width: 100%;
+  background-color: white;
+  padding: 3rem 2rem 2rem 2rem;
+  border: 1px solid black;
+}
+
+iframe {
+  border: 2px solid black;
+}
+
+#contact-details-container {
+  grid-area: contact;
+  width: 100%;
+  background-color: gold;
 }
 
 /* ----- image animations ----- */
