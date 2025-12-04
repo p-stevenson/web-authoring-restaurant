@@ -403,6 +403,11 @@ nav li#home-li a:hover {
   min-width: 100%;
   height: 100%;
   justify-content: space-evenly;
+  border-left: 5rem solid white;
+  border-right: 5rem solid white;
+  border-top: 2rem solid white;
+  border-bottom: 3rem solid  white;
+
 }
 
 ul#menu {
@@ -619,7 +624,10 @@ ul .dish-description {
   grid-area: information;
   font-family: 'Nunito Sans', sans-serif;
   padding: 0 5rem 0 0;
-  font-size: clamp(0.9rem, 0.8rem + 0.25vw, 1.1rem);
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  font-size: clamp(0.9rem, 0.8rem + 0.25vw, 1rem);
 }
 
 .event-button {
@@ -734,7 +742,6 @@ ul .dish-description {
   z-index: 1004;
   background-color: white;
   display: flex;
-  /* flex-direction: row; */
   box-shadow: 0px 2px 12px 8px rgba(0, 0, 0, 0.2);
 }
 
@@ -750,19 +757,43 @@ ul .dish-description {
 #about-information-container {
   grid-area: about;
   width: 100%;
-  background-color: hotpink;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  align-items: self-start;
 }
+
+
+#about-text > h2 {
+  text-align: center;
+  margin: 8rem 0 2rem 0;
+  font-family: 'Tangerine', cursive;
+  font-size: clamp(3rem, 1rem + 0.5vw, 4rem);
+}
+
+#about-text > p {
+  flex: 1 1 auto;
+  text-justify: auto;
+  padding: 0 2rem 2rem 4rem;
+  font-size: 1rem;
+  font-family: 'Nunito Sans', sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+}
+
+
 
 #map-container {
   grid-area: map;
   width: 100%;
   background-color: white;
   padding: 3rem 2rem 2rem 2rem;
-  border: 1px solid black;
 }
 
 iframe {
-  border: 2px solid black;
+  border: 1px solid black;
 }
 
 #contact-details-container {
