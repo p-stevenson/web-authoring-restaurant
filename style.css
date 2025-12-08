@@ -139,6 +139,7 @@ h4,
 h5,
 h6 {
   text-wrap: balance;
+  font-optical-sizing: auto;
 }
 
 ul {
@@ -404,12 +405,6 @@ nav li#home-li a:hover {
   height: 100%;
   justify-content: space-evenly;
   box-shadow: -4px 4px 2px var(--shadow-light);
-  /* margin: 2rem; */
-
-  /* border-left: 2rem solid white;
-  border-right: 2rem solid white;
-  border-top: 3rem solid white;
-  border-bottom: 3rem solid  white; */
 }
 
 ul#menu {
@@ -449,7 +444,6 @@ ul#menu {
   justify-content: center;
   border-bottom: 1px solid #7377729c;
   margin: 0 3rem 0 3rem;
-
 }
 
 .menu-category {
@@ -563,7 +557,7 @@ ul .dish-description {
   display: flex;
   flex-direction: column;
   height: 100%; 
-  width: 20%;
+  width: 30%;
 }
 
 .event-image {
@@ -574,29 +568,18 @@ ul .dish-description {
   min-height: 0; 
 }
 
-#event-image1 {
-  border-bottom: 1px solid black;
-  border-right: 1px solid black;
-}
-
-#event-image2 {
-  border-bottom: 1px solid black;
-  border-right: 1px solid black;
-}
-
-#event-image3 {
-  border-right: 1px solid black;
-}
 
 .event-information-container {
   display: grid;
-  grid-template-columns:  3fr 2fr;
+  grid-template-columns:  2fr 2fr;
   grid-template-areas:  'event1 main'
                         'event2 main'
                         'event3 main';
   grid-template-rows: repeat(3, 1fr);
   height: 100%;
   width: 100%;
+  box-shadow: -4px 4px 2px var(--shadow-light);
+
 }
 
 .event-information {
@@ -606,19 +589,27 @@ ul .dish-description {
                         'date information'
                         'date button';
   position: relative;
+  /* margin: 2rem; */
+  padding: 3rem;
+
 }
 
 #event1 {
   grid-area: event1;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  border-right: 1px solid rgba(0, 0, 0, 0.2);
+  border-left: 1px solid rgba(0, 0, 0, 0.2);
 }
 #event2 {
   grid-area: event2;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  border-right: 1px solid rgba(0, 0, 0, 0.2);
+  border-left: 1px solid rgba(0, 0, 0, 0.2);
 }
 #event3 {
   grid-area: event3;
-  border-bottom: 1px solid black;
+  border-right: 1px solid rgba(0, 0, 0, 0.2);
+  border-left: 1px solid rgba(0, 0, 0, 0.2);
 }
 
 .event-title {
@@ -631,7 +622,7 @@ ul .dish-description {
 .event-information-text {
   grid-area: information;
   font-family: 'Nunito Sans', sans-serif;
-  padding: 0 5rem 0 0;
+  padding: 0 2rem 0 0;
   font-optical-sizing: auto;
   font-weight: 300;
   font-style: normal;
