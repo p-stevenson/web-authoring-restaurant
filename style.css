@@ -739,7 +739,7 @@ ul .dish-description {
   top: 2rem;
   height: calc(100vh - 2rem);
   z-index: 1004;
-  background-color: white;
+  background-color: rgb(179, 179, 179);
   display: flex;
   box-shadow: 0px 2px 12px 8px rgba(0, 0, 0, 0.2);
 }
@@ -751,12 +751,13 @@ ul .dish-description {
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 2fr 1fr;
   width: 100%;
+  background-color: rgb(226, 226, 226);
 }
 
 #about-information-container {
   grid-area: about;
   width: 100%;
-  background-color: white;
+  background-color: rgb(241, 241, 241);
   display: flex;
   flex-direction: column;
   padding: 2rem;
@@ -769,8 +770,9 @@ ul .dish-description {
   justify-content: center;
   gap: 0;
   width: 100%;
-  margin-bottom: clamp(2rem, 4vw, 3.5rem);
+  /* margin-bottom: clamp(2rem, 4vw, 3.5rem); */
   /* align-self: stretch; */
+  margin-top: 3rem;
   padding-top: 5rem;
   padding-bottom: 0.5rem;
 }
@@ -819,7 +821,7 @@ ul .dish-description {
 
 #about-text > h2 {
   text-align: center;
-  margin: 0 0 2rem 0;
+  margin: 0rem 0 2rem 0;
   /* padding: clamp(1.5rem, 0.5rem + 1vw, 2.5rem) 0 0 0; */
   font-family: 'Tangerine', cursive;
   font-size: clamp(3rem, 1rem + 0.5vw, 4rem);
@@ -839,7 +841,7 @@ ul .dish-description {
 #map-container {
   grid-area: map;
   width: 100%;
-  background-color: white;
+  background-color: rgb(241, 241, 241);
   padding: 10rem 5rem 2rem 2rem;
 }
 
