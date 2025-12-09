@@ -763,10 +763,64 @@ ul .dish-description {
   align-items: self-start;
 }
 
+.about-polaroid-gallery {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  gap: 0;
+  width: 100%;
+  margin-bottom: clamp(2rem, 4vw, 3.5rem);
+  /* align-self: stretch; */
+  padding-top: 5rem;
+  padding-bottom: 0.5rem;
+}
+
+.about-polaroid {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff;
+  padding: 0.75rem;
+  padding-bottom: 1.5rem;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 2px 3px var(--shadow-medium);
+  width: clamp(160px, 20vw, 220px);
+  text-align: center;
+  transform: rotate(-9deg);
+  z-index: 1010;
+}
+
+.about-polaroid + .about-polaroid {
+  margin-left: clamp(-3rem, -5vw, -2.5rem);
+}
+
+.about-polaroid:nth-child(2) {
+  transform: rotate(2deg);
+}
+
+.about-polaroid:nth-child(3) {
+  transform: rotate(9deg);
+}
+
+/* .about-polaroid:hover {
+  transform: rotate(0deg) translateY(-6px);
+  box-shadow: 0 25px 28px var(--shadow-heavy);
+  z-index: 5;
+} */
+
+.about-polaroid img {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  margin-bottom: 1rem;
+}
 
 #about-text > h2 {
   text-align: center;
-  margin: 8rem 0 2rem 0;
+  margin: 0 0 2rem 0;
+  /* padding: clamp(1.5rem, 0.5rem + 1vw, 2.5rem) 0 0 0; */
   font-family: 'Tangerine', cursive;
   font-size: clamp(3rem, 1rem + 0.5vw, 4rem);
 }
@@ -774,7 +828,7 @@ ul .dish-description {
 #about-text > p {
   flex: 1 1 auto;
   text-justify: auto;
-  padding: 0 2rem 2rem 4rem;
+  padding: 0rem 2rem 2rem 4rem;
   font-size: 1rem;
   font-family: 'Nunito Sans', sans-serif;
   font-optical-sizing: auto;
@@ -782,13 +836,11 @@ ul .dish-description {
   font-style: normal;
 }
 
-
-
 #map-container {
   grid-area: map;
   width: 100%;
   background-color: white;
-  padding: 3rem 2rem 2rem 2rem;
+  padding: 10rem 5rem 2rem 2rem;
 }
 
 iframe {
