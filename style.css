@@ -1,8 +1,6 @@
 /* ----- font imports ----- */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
-/* @import url('https://fonts.googleapis.com/css2?family=Tangerine:wght@400;700&display=swap'); */
-
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Tangerine:wght@400;700&family=Wire+One&display=swap');
 
 /* ----- local fonts ----- */
@@ -186,7 +184,7 @@ nav {
   position: sticky;
   top: 0;
   z-index: 1005;
-  padding: 0;
+  padding: 2rem 0 1rem 0;
   margin: 0;
 }
 
@@ -538,7 +536,7 @@ ul .dish-description {
 }
 
 .menu-item:hover {
-  background-color: rgb(227, 235, 227);
+  background-color: rgb(241,241,241);
   color: rgb(39, 39, 39);
 }
 
@@ -589,7 +587,6 @@ ul .dish-description {
                         'date information'
                         'date button';
   position: relative;
-  /* margin: 2rem; */
   padding: 3rem;
 
 }
@@ -660,7 +657,6 @@ ul .dish-description {
   background-color: red;
   width: 400px;
   outline: red;
-  /* position: relative; */
   z-index: 1018;
   display: none;
   position: absolute;
@@ -747,9 +743,10 @@ ul .dish-description {
 #about-section-container {
   display: grid;
   grid-template-areas:  'about map'
-                        'contact contact';
+                        'contact contact'
+                        'footer footer';
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 2fr 1fr;
+  grid-template-rows: 2fr 1fr 1fr;
   width: 100%;
   background-color: rgb(226, 226, 226);
 }
@@ -770,10 +767,8 @@ ul .dish-description {
   justify-content: center;
   gap: 0;
   width: 100%;
-  /* margin-bottom: clamp(2rem, 4vw, 3.5rem); */
-  /* align-self: stretch; */
   margin-top: 3rem;
-  padding-top: 5rem;
+  padding-top: 3rem;
   padding-bottom: 0.5rem;
 }
 
@@ -805,12 +800,6 @@ ul .dish-description {
   transform: rotate(9deg);
 }
 
-/* .about-polaroid:hover {
-  transform: rotate(0deg) translateY(-6px);
-  box-shadow: 0 25px 28px var(--shadow-heavy);
-  z-index: 5;
-} */
-
 .about-polaroid img {
   width: 100%;
   aspect-ratio: 3 / 4;
@@ -822,7 +811,6 @@ ul .dish-description {
 #about-text > h2 {
   text-align: center;
   margin: 0rem 0 2rem 0;
-  /* padding: clamp(1.5rem, 0.5rem + 1vw, 2.5rem) 0 0 0; */
   font-family: 'Tangerine', cursive;
   font-size: clamp(3rem, 1rem + 0.5vw, 4rem);
 }
@@ -842,7 +830,7 @@ ul .dish-description {
   grid-area: map;
   width: 100%;
   background-color: rgb(241, 241, 241);
-  padding: 10rem 5rem 2rem 2rem;
+  padding: 5rem 5rem 2rem 2rem;
 }
 
 iframe {
@@ -853,6 +841,13 @@ iframe {
   grid-area: contact;
   width: 100%;
   background-color: gold;
+}
+
+footer {
+  height: 16px;
+  grid-area: footer;
+  background-color: var(--nav-bg);
+  width: 100%;
 }
 
 /* ----- image animations ----- */
