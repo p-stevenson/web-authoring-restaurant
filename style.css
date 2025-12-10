@@ -57,7 +57,6 @@
 *::after {
   box-sizing: border-box;
   margin: 0;
-  /* outline: 1px solid red; */
   outline-offset: -1px;
 }
 
@@ -369,7 +368,6 @@ nav li#home-li a:hover {
   top: 2rem;
   z-index: 1002;
   padding-bottom: 100px;
-  /* box-shadow: 0px 2px 12px 8px rgba(0,0,0,0.2); */
 }
 
 
@@ -532,7 +530,7 @@ ul .dish-description {
 .menu-item button {
   grid-area: arrow;
   padding: 0;
-  margin:  0;
+  margin: 0;
 }
 
 .menu-item:hover {
@@ -549,6 +547,7 @@ ul .dish-description {
   display: flex;
   flex-direction: row;
   box-shadow: 0px 2px 12px 8px rgba(0,0,0,0.2);
+  margin-bottom: 100px;
 }
 
 #event-images-container {
@@ -685,7 +684,7 @@ ul .dish-description {
   font-family: 'Nunito Sans', sans-serif;
   height: 100%;
   width: 100%;
-  background-color: var(--bg-light);
+  background-color: rgb(241, 241, 241);
   color: var(--text-dark);
   border: 1px solid var(--text-dark);
   box-shadow: 5px 5px 15px var(--shadow-medium);
@@ -714,7 +713,7 @@ ul .dish-description {
 }
 
 #booking-form button:hover {
-  background-color: #4a5c5e;
+  background-color: rgb(241, 241, 241);
 }
 
 #event-submit-button {
@@ -732,8 +731,8 @@ ul .dish-description {
 
 #about-section {
   position: sticky;
-  top: 2rem;
-  height: calc(100vh - 2rem);
+  top: 2rem; 
+  height: calc(100vh - 3rem);
   z-index: 1004;
   background-color: rgb(179, 179, 179);
   display: flex;
@@ -746,7 +745,7 @@ ul .dish-description {
                         'contact contact'
                         'footer footer';
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 2fr 1fr 1fr;
+  grid-template-rows: 2fr 1fr auto;
   width: 100%;
   background-color: rgb(226, 226, 226);
 }
@@ -757,7 +756,7 @@ ul .dish-description {
   background-color: rgb(241, 241, 241);
   display: flex;
   flex-direction: column;
-  padding: 2rem;
+  padding: 20% 5rem ;
   align-items: self-start;
 }
 
@@ -830,24 +829,116 @@ ul .dish-description {
   grid-area: map;
   width: 100%;
   background-color: rgb(241, 241, 241);
-  padding: 5rem 5rem 2rem 2rem;
+  padding: 30% 5rem 2rem 2rem;
 }
 
 iframe {
+  /* flex: 1 0 0; */
+  width: 100%;
+  height: 600px;
   border: 1px solid black;
 }
 
 #contact-details-container {
   grid-area: contact;
   width: 100%;
-  background-color: gold;
+  background-color: var(--bg-light);
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 3rem 4rem;
+  display: flex;
+  /* align-items: spa; */
+}
+
+.contact-details {
+  display: grid;
+  justify-items: center;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  width: 100%;
+  /* max-width: 100%; */
+  font-family: 'Nunito Sans', sans-serif;
+  color: var(--text-dark);
+}
+
+.contact-column h3 {
+  font-family: 'Tangerine', cursive;
+  font-size: 2.2rem;
+  margin-bottom: 0.5rem;
+  justify-self: center;
+}
+
+.contact-column p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.contact-column a {
+  color: var(--text-dark);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.contact-column a:hover {
+  border-bottom-color: rgba(0, 0, 0, 0.6);
+}
+
+.opening-hours {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.opening-hours li {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  font-size: 0.9rem;
+}
+
+.opening-hours li + li {
+  margin-top: 0.25rem;
+}
+
+.social-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.social-links li + li {
+  margin-top: 0.15rem;
+}
+
+@media (max-width: 1024px) {
+  .contact-details {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  #contact-details-container {
+    padding: 2rem 1.5rem;
+  }
+
+  .contact-details {
+    grid-template-columns: 1fr;
+  }
 }
 
 footer {
-  height: 16px;
+  height: 3rem;
   grid-area: footer;
-  background-color: var(--nav-bg);
   width: 100%;
+  background-color: var(--nav-bg);
+  color: var(--header-text-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Roboto", sans-serif;
+  font-size: 0.8rem;
+}
+
+footer p {
+  margin: 0;
 }
 
 /* ----- image animations ----- */
