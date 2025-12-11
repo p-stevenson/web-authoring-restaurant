@@ -695,7 +695,8 @@ ul .dish-description {
 }
 
 #booking-form input,
-#booking-form select {
+#booking-form select,
+#booking-form textarea {
   padding: 0.5rem;
   border: 1px solid #ccc;
   border-radius: 4px;
@@ -757,7 +758,8 @@ ul .dish-description {
   background-color: rgb(241, 241, 241);
   display: flex;
   flex-direction: column;
-  padding: clamp(2rem, 1rem + 0.5vw, 4rem) 2rem;
+  /* padding: clamp(2rem, 1rem + 0.5vw, 3rem) 2rem; */
+  padding: 3rem 0 2rem 4rem;
   align-items: self-start;
 }
 
@@ -835,8 +837,9 @@ ul .dish-description {
 }
 
 iframe {
-  width: 100%;
-  height: min(500px, 50vh);
+  float: none;
+  height: 500px;
+  width: min(600px, 60vh);
   border: 1px solid black;
 }
 
@@ -859,6 +862,8 @@ iframe {
 }
 
 .contact-column h3 {
+  display: flex;
+  justify-content: center;
   font-family: 'Tangerine', cursive;
   font-size: 2.2rem;
   margin-bottom: 0.5rem;
@@ -880,21 +885,33 @@ iframe {
   border-bottom-color: rgba(0, 0, 0, 0.6);
 }
 
-.opening-hours {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+.opening-hours-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+  text-align: left;
 }
 
-.opening-hours li {
-  display: flex;
-  justify-content: space-between;
-  gap: 1rem;
-  font-size: 0.9rem;
+.opening-hours-table caption {
+  font-family: 'Tangerine', cursive;
+  font-size: 2.2rem;
+  margin-bottom: 0.5rem;
 }
 
-.opening-hours li + li {
-  margin-top: 0.25rem;
+.opening-hours-table th,
+.opening-hours-table td {
+  padding: 0.6rem 0.75rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.opening-hours-table th {
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+.opening-hours-table tr:last-child th,
+.opening-hours-table tr:last-child td {
+  border-bottom: none;
 }
 
 .social-links {
@@ -952,8 +969,8 @@ footer p {
 
 .imgAnim1 {
   animation: change-img-anim 24s infinite;
-  outline: 1rem solid white;
-  outline-offset: -1rem;
+  outline: 1em solid white;
+  outline-offset: -1em;
 }
 
 .imgAnim2 {

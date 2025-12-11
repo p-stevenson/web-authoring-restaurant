@@ -236,6 +236,9 @@
               <label for="num-guests">Number of Guests:</label>
               <input type="number" id="num-guests" name="num_guests" min="1" value="1" required>
 
+              <label for="booking-notes">Notes:</label>
+              <textarea id="booking-notes" name="booking_notes" rows="3" placeholder="Add any special requests or notes..."></textarea>
+
               <button type="submit" class="event-button" id="event-submit-button">SUBMIT</button>
             </form>
           </div>
@@ -261,6 +264,9 @@
 
               <label for="num-guests">Number of Guests:</label>
               <input type="number" id="num-guests" name="num_guests" min="1" value="1" required>
+
+              <label for="booking-notes">Notes:</label>
+              <textarea id="booking-notes" name="booking_notes" rows="3" placeholder="Add any special requests or notes..."></textarea>
 
               <button type="submit" class="event-button" id="event-submit-button">SUBMIT</button>
             </form>
@@ -288,6 +294,9 @@
               <label for="num-guests">Number of Guests:</label>
               <input type="number" id="num-guests" name="num_guests" min="1" value="1" required>
 
+              <label for="booking-notes">Notes:</label>
+              <textarea id="booking-notes" name="booking_notes" rows="3" placeholder="Add any special requests or notes..."></textarea>
+
               <button type="submit" class="event-button" id="event-submit-button">SUBMIT</button>
             </form>
           </div>
@@ -313,10 +322,10 @@
             <div id="about-text">
             <h2>It's only food...</h2>
             <p>
-              Welcome to bistroTitle, where the coffee is reasonably warm and the welcome is at most tepid. We're a little spot, dedicated to serving up locally sourced food. We believe every dish should be accompanied by top tunes at an almost inappropriate volume.
+              Welcome to <strong><em>bistroTitle</em></strong>, where the coffee is reasonably warm and the welcome is at most tepid. We're a little spot, dedicated to serving up locally sourced food. We believe every dish should be accompanied by top tunes at an almost inappropriate volume.
             </p>
             <p>
-              We also offer the odd class or two where we endeavour to get you and your friends wrecked, while optionally learn something at the same time.
+              We also offer the odd class or two where we endeavour to <q>get you and your friends wrecked</q>, while optionally learn something at the same time.
             </p>
             </div>
         </div>
@@ -328,31 +337,32 @@
         <div id="contact-details-container">
           <div class="contact-details">
             <div class="contact-column" id="contact-visit">
-              <h3>Visit Us</h3>
+              <h3><strong>Visit Us</strong></h3>
               <p>
-                bistroTitle<br>
+                bistroTitle&trade;<br>
                 1 Grafton Street<br>
                 Dublin 2, Ireland
               </p>
             </div>
             <div class="contact-column" id="contact-contact">
-              <h3>Contact</h3>
+              <h3><strong>Contact</strong></h3>
               <p>
                 Phone: <a href="tel:+353875551234">+353 87 555 1234</a><br>
                 Email: <a href="mailto:hello@bistrotitle.ie">hello@bistrotitle.ie</a>
               </p>
             </div>
             <div class="contact-column" id="contact-hours">
-              <h3>Opening Hours</h3>
-              <ul class="opening-hours">
-                <li><span>Mon-Thu</span><span>08:00 - 22:00</span></li>
-                <li><span>Fri</span><span>08:00 - 23:00</span></li>
-                <li><span>Sat</span><span>09:00 - 23:00</span></li>
-                <li><span>Sun</span><span>09:00 - 21:00</span></li>
-              </ul>
+              <h3><strong>Opening Hours</strong></h3>
+              <table class="opening-hours-table">
+                <tbody>
+                  <tr><th scope="row">Mon‑Fri</th><td>08:00 ‑ 22:00</td></tr>
+                  <tr><th scope="row">Sat</th><td>09:00 ‑ 23:00</td></tr>
+                  <tr><th scope="row">Sun</th><td>09:00 ‑ 21:00</td></tr>
+                </tbody>
+              </table>
             </div>
             <div class="contact-column" id="contact-social">
-              <h3>Follow</h3>
+              <h3><strong>Follow</strong></h3>
               <ul class="social-links">
                 <li><a href="#" aria-label="Visit bistroTitle on Instagram">Instagram</a></li>
                 <li><a href="#" aria-label="Visit bistroTitle on Facebook">Facebook</a></li>
@@ -362,7 +372,9 @@
           </div>
         </div>
         <footer>
-            <p>&copy; 2025 bistroTitle. All Rights Reserved.</p>
+            <h4>
+              &copy; 2025 bistroTitle&trade;. All Rights Reserved.
+            </h4>
         </footer>
       </div>
     </section>
