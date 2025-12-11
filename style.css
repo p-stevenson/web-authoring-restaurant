@@ -748,6 +748,7 @@ ul .dish-description {
   grid-template-rows: 2fr 1fr auto;
   width: 100%;
   background-color: rgb(226, 226, 226);
+  /* max-height: calc(100vh - 3rem);  */
 }
 
 #about-information-container {
@@ -756,7 +757,7 @@ ul .dish-description {
   background-color: rgb(241, 241, 241);
   display: flex;
   flex-direction: column;
-  padding: 20% 5rem ;
+  padding: clamp(2rem, 1rem + 0.5vw, 4rem) 2rem;
   align-items: self-start;
 }
 
@@ -766,7 +767,6 @@ ul .dish-description {
   justify-content: center;
   gap: 0;
   width: 100%;
-  margin-top: 3rem;
   padding-top: 3rem;
   padding-bottom: 0.5rem;
 }
@@ -809,7 +809,7 @@ ul .dish-description {
 
 #about-text > h2 {
   text-align: center;
-  margin: 0rem 0 2rem 0;
+  margin: 0rem 0 1rem 0;
   font-family: 'Tangerine', cursive;
   font-size: clamp(3rem, 1rem + 0.5vw, 4rem);
 }
@@ -817,7 +817,7 @@ ul .dish-description {
 #about-text > p {
   flex: 1 1 auto;
   text-justify: auto;
-  padding: 0rem 2rem 2rem 4rem;
+  padding: 0rem 2rem 1rem 2rem;
   font-size: 1rem;
   font-family: 'Nunito Sans', sans-serif;
   font-optical-sizing: auto;
@@ -827,26 +827,26 @@ ul .dish-description {
 
 #map-container {
   grid-area: map;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
   background-color: rgb(241, 241, 241);
-  padding: 30% 5rem 2rem 2rem;
 }
 
 iframe {
-  /* flex: 1 0 0; */
   width: 100%;
-  height: 600px;
+  height: min(500px, 50vh);
   border: 1px solid black;
 }
 
 #contact-details-container {
   grid-area: contact;
   width: 100%;
-  background-color: var(--bg-light);
+  background-color: rgb(241, 241, 241);
   border-top: 1px solid rgba(0, 0, 0, 0.1);
-  padding: 3rem 4rem;
+  padding: 2rem 4rem;
   display: flex;
-  /* align-items: spa; */
 }
 
 .contact-details {
@@ -854,7 +854,6 @@ iframe {
   justify-items: center;
   grid-template-columns: repeat(4, minmax(0, 1fr));
   width: 100%;
-  /* max-width: 100%; */
   font-family: 'Nunito Sans', sans-serif;
   color: var(--text-dark);
 }
@@ -925,7 +924,7 @@ iframe {
 }
 
 footer {
-  height: 3rem;
+  height: 1.5rem;
   grid-area: footer;
   width: 100%;
   background-color: var(--nav-bg);
